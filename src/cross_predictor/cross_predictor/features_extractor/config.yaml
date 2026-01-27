@@ -1,0 +1,99 @@
+################################ GENERAL #######################################
+DETECT_PATH: 'runs/detect'
+DETECT_FOLDER : 'exp'
+POSE_WEIGTHS : 'weigths/pose.pth'
+############################### DEEP SORT #####################################
+REID_CKPT : 'weigths/ckpt.t7'
+MAX_DIST : 0.2
+MIN_CONFIDENCE : 0.2 # Usual 0.3
+NMS_MAX_OVERLAP : 0.5
+MAX_IOU_DISTANCE : 0.7
+MAX_AGE : 70
+N_INIT : 3
+NN_BUDGET : 100
+ATTACH : True
+########################## ABILITY DETECTOR(YOLOV7) ##########################
+IMAGE_SIZE : 640
+ABILITY_WEIGHTS: 'src/cross_predictor/cross_predictor/features_extractor/weigths/yolov7last.pt' #yolov7last, yolov7_child
+THRESHOLD : 0.63
+CONF_THRESHOLD : 0.25
+IOU_THRESHOLD : 0.45
+######################### GROUP DETECTOR(YOLOV7) ##########################
+GROUP_WEIGHTS : 'weigths/group.pt'
+########################## ROAD CONTEXT DETECTOR (YOLOPV2) ##########################
+STRIDE : 32
+F_YOLOPV2: 'src/cross_predictor/cross_predictor/features_extractor/weigths/yolopv2.pt'
+DISTANCE_CURB_NEAR : 0.9 # 0.9 normal
+DISTANCE_CURB_MEDIUM : 1.7 # 1.7 normal
+YOLOVP2_RESOLUTION: 1920 #1920 1280
+SCALE_DETECTION: 3 #3 2
+########################## DATASET ###############################
+DATASET_NAME: "VR"
+PIE_NAME: "pie"
+JAAD_NAME: "jaad"
+pie:
+  PATH_CLIPS: "PIE_clips/"
+
+
+jaad:
+  PATH_CLIPS: "JAAD_clips/"
+
+FEATURES : {"video": 0,"frame": 1, "person": 2, "attention": 3, "orientation": 4, "motion": 5, "proximity": 6, "zebra_cross": 7, "distance": 8, "decision": 9,
+"occlusion": 10, "action": 11, "gender": 12, "age": 13, "signalized": 14, "intersection": 15, "lanes": 16, "trafficDirection": 17, "designed": 18, "crossingGroup": 19, "groupBehavior": 20}
+########################## ACTION TRANSFORMER ###############################
+# Dataset Settings
+DATASET: "posenet"
+openpose:
+  HIP_CENTER_OPEN_POSE: 8
+  CLASSES: 20
+  FRAMES: 30
+  KEYPOINTS: 21
+  CENTER_1: 1
+  CENTER_2: 1
+  MODULE_KEYPOINT_1: 8
+  MODULE_KEYPOINT_2: 8
+  PRUNE: [1,8]
+
+posenet:
+  CLASSES: 5
+  FRAMES: 30
+  KEYPOINTS: 17
+  CENTER_1: 1
+  CENTER_2: 2
+  MODULE_KEYPOINT_1: 7
+  MODULE_KEYPOINT_2: 8
+  PRUNE: []
+
+
+
+#LABELS: ['standing','check-watch','cross-arms','scratch-head','sit-down','get-up','turn-around','walking','wave1','boxing',
+#         'kicking','pointing','pick-up','bending','hands-clapping','wave2','jogging','jumping','pjump','running']
+
+#LABELS: ["standing","walk","wave","jump","run", "other"]
+LABELS: ["standing","walk","wave","run", "undefined"]
+ACT_ACTION_LABELS:  { 0: "STANDING", 1: "WALK", 2: "WAVE", 3: "RUN", 4: "UNDEFINED"}
+
+# Model Settings
+N_HEADS: 3
+N_LAYERS: 4
+EMBED_DIM: 64
+DROPOUT: 0.3
+MLP: 256
+N_ENCODER: 1
+
+# Trainning Settings
+SCHEDULER: True
+N_EPOCHS: 300       
+BATCH_SIZE: 512
+WEIGHT_DECAY: 0.0001  
+WARMUP_PERC: 0.3  
+STEP_PERC: 0.8
+LR_MULT: 1
+
+########################## REAL TIME SETTINGS ##########################
+REFRESH_RATE: 10
+
+########################## PREDICTOR SETTINGS ##########################
+OBSERVATION_FRAMES : 15
+PREDICTION_FRAMES: 15
+FUZZY_INPUTS : 6
