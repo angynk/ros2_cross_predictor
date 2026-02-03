@@ -20,6 +20,7 @@ import cv2
 import rclpy
 
 from rclpy.node import Node
+from rclpy.qos import QoSProfile
 
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
@@ -31,13 +32,15 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
+        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0191')
         self.declare_parameter('topic_name', '/image_raw')
-        self.declare_parameter('publish_period', 0.5)
+        self.declare_parameter('publish_period', 1.0)
         self.image_folder = self.get_parameter('image_folder').value
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value
-        self.publisher_ = self.create_publisher(Image, self.topic_name, 10)
+        qos = QoSProfile(depth=50)
+        self.publisher_ = self.create_publisher(Image, self.topic_name, qos)
+        self.seq = 0
 
         self.timer = self.create_timer(self.publish_period, self.timer_callback)
         
@@ -68,7 +71,8 @@ class MinimalPublisher(Node):
 
         msg = self.bridge.cv2_to_imgmsg(image, encoding='bgr8')
         msg.header.stamp = self.get_clock().now().to_msg()
-        msg.header.frame_id = image_path 
+        msg.header.frame_id = self.seq.__str__()
+        self.seq += 1
 
         self.publisher_.publish(msg)
         self.get_logger().info(f'Published: {os.path.basename(image_path)}')

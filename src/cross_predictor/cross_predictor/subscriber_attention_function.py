@@ -16,7 +16,9 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import Image
+from my_msgs.msg import Result
 from cv_bridge import CvBridge
+from rclpy.qos import QoSProfile
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
 from cross_predictor.features_extractor.pose_extractor import PoseExtractor
@@ -35,8 +37,9 @@ class MinimalSubscriber(Node):
             self.topic_name,
             self.listener_callback,
             10)
+        qos = QoSProfile(depth=50)
         self.subscription  # prevent unused variable warning
-        self.publisher = self.create_publisher(Image, '/attention/result', 10)    
+        self.publisher = self.create_publisher(Result, '/attention/resultv2', qos)    
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor()
@@ -47,14 +50,18 @@ class MinimalSubscriber(Node):
         #self.get_logger().info('I heard: "%s"' % msg.height)
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
-        results = self.yolov_detector.detect_pedestrians(cv_image)
+        results = self.yolov_detector.track_pedestrians(cv_image)
+        attention_results = []
         for result in results:
+            id_person = int(result.boxes.id.numpy()[0])
             _, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            attention = str(pedestrian_gaze (skeleton))
-            self.get_logger().info('Attention: "%s"' % attention)
-        result = Image()
+            attention = id_person.__str__() +'-'+str(pedestrian_gaze (skeleton))
+            #self.get_logger().info('Attention: ' + attention)
+            attention_results.append(attention)
+        result = Result()
         result.header = msg.header
-        result.header.frame_id = attention
+        result.header.stamp = msg.header.stamp
+        result.result = attention_results.__str__()
         self.publisher.publish(result)
 
 

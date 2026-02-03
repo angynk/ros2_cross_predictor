@@ -19,6 +19,7 @@ import yaml
 from pathlib import Path
 
 from sensor_msgs.msg import Image
+from my_msgs.msg import Result
 from cv_bridge import CvBridge
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
@@ -41,6 +42,7 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
+        self.publisher = self.create_publisher(Image, '/proximity/result', 10)   
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor() 
@@ -56,12 +58,20 @@ class MinimalSubscriber(Node):
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(msg.header.frame_id)
+        proximity_results = []
         for result in results:
-            for result in results:
-                img_mod = self.road_detector.prepare_img(result.orig_img)
-                self.road_detector.detect_road_context(img_mod,result.orig_img)
-                proximity = self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy())
-                self.get_logger().info('Proximity: "%s"' % proximity)
+            id_person = int(result.boxes.id.numpy()[0])
+            img_mod = self.road_detector.prepare_img(result.orig_img)
+            self.road_detector.detect_road_context(img_mod,result.orig_img)
+            proximity = id_person.__str__() +'-'+ self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy())
+            self.get_logger().info('Proximity: "%s"' % proximity)
+            proximity_results.append(proximity)  
+        result = Result()
+        result.header = msg.header
+        result.header.stamp = msg.header.stamp
+        result.header.result = proximity_results.__str__()
+        self.publisher.publish(result)
+
 
 
 def main(args=None):

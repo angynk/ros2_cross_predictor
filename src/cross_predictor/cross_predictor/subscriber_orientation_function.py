@@ -14,8 +14,10 @@
 import cv2
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile
 
 from sensor_msgs.msg import Image
+from my_msgs.msg import Result
 from cv_bridge import CvBridge
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
@@ -35,6 +37,8 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
+        qos = QoSProfile(depth=50)
+        self.publisher = self.create_publisher(Result, '/orientation/resultv2', qos)   
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor()
@@ -45,12 +49,21 @@ class MinimalSubscriber(Node):
         #self.get_logger().info('I heard: "%s"' % msg.height)
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
-        results = self.yolov_detector.detect_pedestrians(cv_image)
+        results = self.yolov_detector.track_pedestrians(cv_image)
+        orientation_results = []
         for result in results:
+            id_person = int(result.boxes.id.numpy()[0])
             orientation, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            self.get_logger().info('Orientation: "%s"' % orientation)
-        cv2.imshow("Received Image", cv_image)
-        cv2.waitKey(1)
+            orientation = id_person.__str__() +'-'+ orientation
+            #self.get_logger().info('Orientation: "%s"' % orientation)
+            orientation_results.append(orientation)
+        #cv2.imshow("Received Image", cv_image)
+        #cv2.waitKey(1)
+        result = Result()
+        result.header = msg.header
+        result.header.stamp = msg.header.stamp
+        result.result = orientation_results.__str__()
+        self.publisher.publish(result)
 
 
 def main(args=None):

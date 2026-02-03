@@ -21,8 +21,9 @@ from pathlib import Path
 
 
 from sensor_msgs.msg import Image
-from std_msgs.msg import String
+from my_msgs.msg import Result
 from cv_bridge import CvBridge
+from rclpy.qos import QoSProfile
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
 from cross_predictor.features_extractor.pose_extractor import PoseExtractor
@@ -44,7 +45,8 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        self.publisher = self.create_publisher(Image, '/action/result', 10)    
+        qos = QoSProfile(depth=50)
+        self.publisher = self.create_publisher(Result, '/action/resultv2', qos)    
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor() 
@@ -61,15 +63,18 @@ class MinimalSubscriber(Node):
 
         self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(cv_image)
+        action_results = []
         for result in results:
             id_person = int(result.boxes.id.numpy()[0])
             _, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
             buffer = self.action_recognizer.save_buffer_skeleton(id_person, skeleton)
-            action = self.action_recognizer.detect_action(skeleton, buffer)[0]
-            self.get_logger().info('Action: "%s"' % action)    
-        result = Image()
+            action = id_person.__str__() +'-'+ self.action_recognizer.detect_action(skeleton, buffer)
+            #self.get_logger().info('Action:' + action)  
+            action_results.append(action)  
+        result = Result()
         result.header = msg.header
-        result.header.frame_id = action
+        result.header.stamp = msg.header.stamp
+        result.result = action_results.__str__()
         self.publisher.publish(result)
 
 
