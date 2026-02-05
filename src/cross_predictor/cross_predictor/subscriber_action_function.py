@@ -50,7 +50,7 @@ class MinimalSubscriber(Node):
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor() 
-        with open('src/cross_predictor/cross_predictor/features_extractor/config.yaml') as f:
+        with open('src/cross_predictor/cross_predictor/config.yaml') as f:
             settings = yaml.load(f, Loader=yaml.SafeLoader)
         #DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')    
         self.action_recognizer = ActionRecognizer(settings, torch.device('cpu'))

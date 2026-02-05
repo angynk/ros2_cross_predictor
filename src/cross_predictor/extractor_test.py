@@ -8,6 +8,8 @@ from cross_predictor.features_extractor.action_extractor import ActionRecognizer
 from cross_predictor.features_extractor.road_context_extractor import RoadContextDetector
 from cross_predictor.features_extractor.attention_extractor import pedestrian_gaze
 
+from cross_predictor.kge.kg_predictor import KGPredictor
+
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 
@@ -62,15 +64,25 @@ def extract_proximity(image_path, road_detector, yolov_detector):
         print("Proximity: ", proximity)
 
 
-with open('src/cross_predictor/cross_predictor/features_extractor/config.yaml') as f:
+def predict_crossing(settings):
+    predictor_kg = KGPredictor(settings)
+    frame_features = {'proximity': "NearFromCurb", 'action': "Na", 'distance': "MiddleDisToEgoVeh",
+                              'attention': "Looking", 'orientation': "LeftDirection"}
+    prediction, prob_cross, prob_nocross = predictor_kg.bayesian_method(frame_features)
+    print("Prediction: ", prediction)
+    return prediction
+
+
+with open('src/cross_predictor/cross_predictor/config.yaml') as f:
     settings = yaml.load(f, Loader=SafeLoader)
 #extract_orientation("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 #extract_attention("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 folder_path = Path('/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
 image_paths = sorted(folder_path.glob('*.png'))
-'''road_detector, yolov_detector= init_proximity_extractor(settings, (129 * 1.7))
+road_detector, yolov_detector= init_proximity_extractor(settings, (129 * 1.7))
 for path in image_paths:
-    extract_proximity(path,road_detector, yolov_detector)'''
-yolov_detector, pose_extractor, action_recognizer = init_action_extractor(settings)
-for path in image_paths:
-    extract_action(path, yolov_detector, pose_extractor, action_recognizer)
+    extract_proximity(path,road_detector, yolov_detector)
+#yolov_detector, pose_extractor, action_recognizer = init_action_extractor(settings)
+#for path in image_paths:
+#    extract_action(path, yolov_detector, pose_extractor, action_recognizer)
+#predict_crossing(settings)

@@ -71,14 +71,10 @@ class ActionRecognizer ():
         return self.get_action(value)
     
     def get_action(self, action):
-        if action == 0 :    
+        if action == 0 or action == 2:    #Stand and Wave
             return 'Stand'
-        elif action == 1:
+        elif action == 1 or action == 3: #Walk and Run
             return 'Walk'
-        elif action == 2 :
-            return 'Wave'
-        elif action == 3 :
-            return 'Run'
         return 'Na'
 
 
