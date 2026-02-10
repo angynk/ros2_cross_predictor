@@ -18,7 +18,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from my_msgs.msg import Result
 from cv_bridge import CvBridge
-from rclpy.qos import QoSProfile
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
 from cross_predictor.features_extractor.pose_extractor import PoseExtractor
@@ -37,7 +37,9 @@ class MinimalSubscriber(Node):
             self.topic_name,
             self.listener_callback,
             10)
-        qos = QoSProfile(depth=50)
+        qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
+                        history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
+                        depth=10)
         self.subscription  # prevent unused variable warning
         self.publisher = self.create_publisher(Result, '/attention/resultv2', qos)    
         self.bridge = CvBridge()
@@ -54,8 +56,8 @@ class MinimalSubscriber(Node):
         attention_results = []
         for result in results:
             id_person = int(result.boxes.id.numpy()[0])
-            _, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            attention = id_person.__str__() +'-'+str(pedestrian_gaze (skeleton))
+            orientation, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
+            attention = id_person.__str__() +'-'+str(pedestrian_gaze (skeleton))+','+orientation
             #self.get_logger().info('Attention: ' + attention)
             attention_results.append(attention)
         result = Result()

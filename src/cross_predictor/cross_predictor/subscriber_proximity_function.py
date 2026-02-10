@@ -14,7 +14,7 @@
 import cv2
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 import torch
 import yaml
 from pathlib import Path
@@ -43,7 +43,9 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        qos = QoSProfile(depth=50)
+        qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
+                        history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
+                        depth=10)
         self.publisher = self.create_publisher(Result, '/proximity/resultv2', qos_profile=qos)   
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()

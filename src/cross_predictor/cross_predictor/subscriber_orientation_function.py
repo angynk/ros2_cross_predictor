@@ -14,7 +14,7 @@
 import cv2
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 from sensor_msgs.msg import Image
 from my_msgs.msg import Result
@@ -37,7 +37,9 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        qos = QoSProfile(depth=50)
+        qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
+                        history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
+                        depth=10)
         self.publisher = self.create_publisher(Result, '/orientation/resultv2', qos)   
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()

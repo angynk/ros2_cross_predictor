@@ -73,7 +73,7 @@ def predict_crossing(settings):
     return prediction
 
 
-with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+'''with open('src/cross_predictor/cross_predictor/config.yaml') as f:
     settings = yaml.load(f, Loader=SafeLoader)
 #extract_orientation("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 #extract_attention("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
@@ -85,4 +85,36 @@ for path in image_paths:
 #yolov_detector, pose_extractor, action_recognizer = init_action_extractor(settings)
 #for path in image_paths:
 #    extract_action(path, yolov_detector, pose_extractor, action_recognizer)
-#predict_crossing(settings)
+#predict_crossing(settings)'''
+
+
+def clean_and_split(raw_str):
+        # Remove brackets and split by ", " (comma + space) to isolate items
+        return raw_str.strip("[]").split(", ")
+
+
+def parse_data( act_list, prox_list, att_list):
+        result = {}
+
+        # Helper function to split ID from the rest of the string
+        # We use .split('-', 1) to ensure we only split at the first dash
+        for item in clean_and_split(act_list):
+            idx, val = item.split('-', 1)
+            result[idx] = {"action": val}
+
+        for item in clean_and_split(prox_list):
+            idx, val = item.split('-', 1)
+            if idx in result:
+                result[idx]["proximity"] = val
+
+        for item in clean_and_split(att_list):
+            idx, rest = item.split('-', 1)
+            # Split the remaining string by the comma for attention and orientation
+            attention, orientation = rest.split(',')
+            if idx in result:
+                result[idx]["attention"] = attention
+                result[idx]["orientation"] = orientation
+
+        return result
+
+parse_data("['1-Na']",  "['1-NearFromCurb']" , "['1-NotLooking,LeftDirection']")

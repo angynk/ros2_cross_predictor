@@ -1,10 +1,10 @@
 import rclpy
-from message_filters import TimeSynchronizer
+from message_filters import ApproximateTimeSynchronizer
 import message_filters
 from rclpy.node import Node
 from my_msgs.msg import Result
 from std_msgs.msg import  String
-from rclpy.qos import QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 from collections import defaultdict
 from rclpy.executors import MultiThreadedExecutor
 import yaml
@@ -23,16 +23,16 @@ class CrossPredictorAggregator(Node):
         self.timeout_sec = 3.0  # drop incomplete sets
 
         self.pub = self.create_publisher(String, '/cross_predictor/final', 10)
-        qos = QoSProfile(depth=50)
+        qos = QoSProfile(
+                reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
+                history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
+                depth=10                                   # Small buffer for lower latency
+            )
         self.sub_action =message_filters.Subscriber(self, Result, '/action/resultv2', qos_profile=qos)
         self.sub_attention =message_filters.Subscriber(self, Result, '/attention/resultv2', qos_profile=qos)
         self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity/resultv2',qos_profile=qos)
-        #self.sub_orientation =message_filters.Subscriber(self, Result, '/orientation/resultv2', qos_profile=qos)
-        #self.sub_action.registerCallback(lambda msg: self._increment_count("action"))
-        #self.sub_attention.registerCallback(lambda msg: self._increment_count("attention"))
-        #self.sub_orientation.registerCallback(lambda msg: self._increment_count("orientation"))
 
-        self.ts = TimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=50)
+        self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=100,slop=2.0)
         self.ts.registerCallback(self.synchronized_callback)
         
         self.get_logger().info("Aggregator started. Waiting for synchronized Image headers...")
@@ -55,48 +55,53 @@ class CrossPredictorAggregator(Node):
         #proximity = msg_proximity.header.frame_id
         self._increment_count("proximity")
         proximity = msg_proximity.result
-        frame_features = self.merge_results(action, attention, proximity)
+        frame_features = self.parse_data(action, proximity,attention)
         if frame_features is None:
             self.get_logger().error("Mismatched IDs in synchronized messages. Skipping this set.")
             return
         self.get_logger().info(f"Extracted Features: {frame_features}")
-        prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features[1])
+        prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features["1"])
         self.get_logger().error("--- FINAL MERGE ---")
         final = String()
-        final.data = f"ACTION={action} | ATTENTION={attention} | PROXIMITY={proximity} | PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
+        final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
         self.get_logger().info(f"Final Result: {final.data}")
         self.get_logger().error("-------------------")
         self.pub.publish(final)
 
-    def extract_id_and_val(self,raw_str):
-        """Turns \"['1-Na']\" into (1, 'Na')"""
-        # 1. Convert string representation of list to actual list
-        data_list = ast.literal_eval(raw_str)
-        # 2. Get the first element '1-Na'
-        inner_str = data_list[0]
-        # 3. Split by the first hyphen only
-        id_part, val_part = inner_str.split('-', 1)
-        return int(id_part), val_part
     
-    def merge_results(self,act, att, prox):
-        # Extract data from all three
-        id_a, val_a = self.extract_id_and_val(act)
-        id_p, val_att = self.extract_id_and_val(att)
-        id_d, val_prox = self.extract_id_and_val(prox)
-        
-        # Sanity check: ensure they are all for the same ID
-        if id_a == id_p == id_d:
-            return {
-                id_a: {
-                    'proximity': val_prox,
-                    'action': val_a,
-                    'attention': val_att,
-                    'orientation': "LeftDirection",
-                    'distance': "MiddleDisToEgoVeh"
-                }
-            }
-        else:
-            return None # Or handle the mismatch logic
+    def clean_and_split(self, raw_str):
+        # Remove brackets and split by ", " (comma + space) to isolate items
+        return raw_str.strip("[]").split(", ")
+
+
+    def parse_data(self, act_list, prox_list, att_list):
+        result = {}
+
+        # Helper function to split ID from the rest of the string
+        # We use .split('-', 1) to ensure we only split at the first dash
+        for item in self.clean_and_split(act_list):
+            idx, val = item.split('-', 1)
+            idx = idx.strip("'") 
+            val = val.strip("'")  
+            result[idx] = {"action": val}
+
+        for item in self.clean_and_split(prox_list):
+            idx, val = item.split('-', 1)
+            idx = idx.strip("'") 
+            val = val.strip("'")  
+            if idx in result:
+                result[idx]["proximity"] = val
+
+        for item in self.clean_and_split(att_list):
+            idx, rest = item.split('-', 1)
+            idx = idx.strip("'") 
+            rest = rest.strip("'")  
+            attention, orientation = rest.split(',')
+            if idx in result:
+                result[idx]["attention"] = attention
+                result[idx]["orientation"] = orientation
+
+        return result
 
 def main(args=None):
     rclpy.init()

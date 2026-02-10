@@ -23,7 +23,7 @@ from pathlib import Path
 from sensor_msgs.msg import Image
 from my_msgs.msg import Result
 from cv_bridge import CvBridge
-from rclpy.qos import QoSProfile
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
 from cross_predictor.features_extractor.pose_extractor import PoseExtractor
@@ -45,7 +45,9 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        qos = QoSProfile(depth=50)
+        qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
+                        history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
+                        depth=10)
         self.publisher = self.create_publisher(Result, '/action/resultv2', qos)    
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
