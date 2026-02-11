@@ -113,7 +113,7 @@ class RoadContextDetector :
             rigth_move = int(pedX + pixel_distance)
             return self.find_seg_mask(left_move,rigth_move, pedX, int (pedbox[3]), 1)
         
-        return self.get_proximity(value)
+        return value
 
     def get_proximity(self, proximity):
         if proximity == 0:

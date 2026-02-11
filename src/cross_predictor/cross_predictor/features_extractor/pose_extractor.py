@@ -40,7 +40,8 @@ class PoseExtractor:
         pose_time, pose_preds = timed(lambda: self.pedrec_recognizer(self.pose_recognizer, self.pose_model, image, [box], self.device))
         orientation = pose_preds['orientations'][0]
         skeleton = pose_preds['skeletons'][0]
-        return self.get_orientation_linguistic(self.get_body_orientation(math.degrees(orientation[0][1]))), skeleton
+        orientation_value = self.get_body_orientation(math.degrees(orientation[0][1]))
+        return self.get_orientation_linguistic(orientation_value), orientation_value, skeleton
     
     def get_orientation_linguistic(self, orientations):
         if orientations >=0 and orientations < 90:

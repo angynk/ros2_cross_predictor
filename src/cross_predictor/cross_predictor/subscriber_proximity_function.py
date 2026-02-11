@@ -52,6 +52,7 @@ class MinimalSubscriber(Node):
         self.pose_extractor = PoseExtractor() 
         with open('src/cross_predictor/cross_predictor/config.yaml') as f:
             settings = yaml.load(f, Loader=yaml.SafeLoader)
+        self.predictor_type = settings['PREDICTOR']
         #DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')    
         self.road_detector = RoadContextDetector( torch.device('cpu'), settings,(129 * 1.7))
         self.get_logger().info(f'Subscribed to {self.topic_name}')
@@ -67,8 +68,11 @@ class MinimalSubscriber(Node):
             id_person = int(result.boxes.id.numpy()[0])
             img_mod = self.road_detector.prepare_img(result.orig_img)
             self.road_detector.detect_road_context(img_mod,result.orig_img)
-            proximity = id_person.__str__() +'-'+ self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy())
-            #self.get_logger().info('Proximity: "%s"' % proximity)
+            proximity = str(self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy()))
+            if self.predictor_type=='KG':
+                proximity = self.road_detector.get_proximity(proximity)
+            proximity = id_person.__str__() +'-'+ proximity
+            self.get_logger().info('Proximity: "%s"' % proximity)
             proximity_results.append(proximity)  
         result = Result()
         result.header = msg.header

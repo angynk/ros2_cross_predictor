@@ -65,10 +65,9 @@ class ActionRecognizer ():
             probability = top_p.cpu().detach().numpy()[0][0]
             #print("ACTION: "+value+" - "+str(probability))
             color = self.colors[int(value)]
-        
+    
 
-
-        return self.get_action(value)
+        return value
     
     def get_action(self, action):
         if action == 0 or action == 2:    #Stand and Wave

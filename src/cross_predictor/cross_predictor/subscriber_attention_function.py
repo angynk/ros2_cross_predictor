@@ -13,6 +13,7 @@
 # limitations under the License.
 import cv2
 import rclpy
+import yaml
 from rclpy.node import Node
 
 from sensor_msgs.msg import Image
@@ -45,6 +46,9 @@ class MinimalSubscriber(Node):
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
         self.pose_extractor = PoseExtractor()
+        with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+            settings = yaml.load(f, Loader=yaml.SafeLoader)
+        self.predictor_type = settings['PREDICTOR']
         self.get_logger().info(f'Subscribed to {self.topic_name}')
 
 
@@ -56,9 +60,13 @@ class MinimalSubscriber(Node):
         attention_results = []
         for result in results:
             id_person = int(result.boxes.id.numpy()[0])
-            orientation, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            attention = id_person.__str__() +'-'+str(pedestrian_gaze (skeleton))+','+orientation
-            #self.get_logger().info('Attention: ' + attention)
+            orientation_ling, orientation_value, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
+            att_ling, att_value = pedestrian_gaze (skeleton)
+            if self.predictor_type=='KG':
+                attention = id_person.__str__() +'-'+att_ling+','+orientation_ling
+            else:
+                attention = id_person.__str__() +'-'+str(att_value)+','+str(orientation_value)
+            self.get_logger().info('Attention: ' + attention)
             attention_results.append(attention)
         result = Result()
         result.header = msg.header

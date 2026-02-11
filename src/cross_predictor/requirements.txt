@@ -7,3 +7,4 @@ ampligraph==2.0.0
 tensorflow==2.10.0 
 torch==2.5.1
 torchvision==0.20.1
+simpful==2.12.0

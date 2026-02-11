@@ -97,6 +97,7 @@ REFRESH_RATE: 10
 OBSERVATION_FRAMES : 15
 PREDICTION_FRAMES: 15
 FUZZY_INPUTS : 6
+PREDICTOR : "KG" # "KG", "FUZZY", "ENSEMBLE"
 
 ###################################### KG CONFIGURATION ####################################
 KG:
@@ -111,6 +112,6 @@ KG:
 
 ###################################### FUZZY CONFIGURATION ####################################
 FUZZY:
-  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.txt'
-  rules_detail_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.json'
-  included_features: [ 'Action', 'Orientation','Attention', 'Distance', 'Proximity']
+  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_004.txt'
+  rules_detail_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_004.json'
+  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']

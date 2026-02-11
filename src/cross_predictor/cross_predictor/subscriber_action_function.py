@@ -54,6 +54,7 @@ class MinimalSubscriber(Node):
         self.pose_extractor = PoseExtractor() 
         with open('src/cross_predictor/cross_predictor/config.yaml') as f:
             settings = yaml.load(f, Loader=yaml.SafeLoader)
+        self.predictor_type = settings['PREDICTOR']
         #DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')    
         self.action_recognizer = ActionRecognizer(settings, torch.device('cpu'))
         self.get_logger().info(f'Subscribed to {self.topic_name}')
@@ -68,10 +69,13 @@ class MinimalSubscriber(Node):
         action_results = []
         for result in results:
             id_person = int(result.boxes.id.numpy()[0])
-            _, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
+            _,_, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
             buffer = self.action_recognizer.save_buffer_skeleton(id_person, skeleton)
-            action = id_person.__str__() +'-'+ self.action_recognizer.detect_action(skeleton, buffer)
-            #self.get_logger().info('Action:' + action)  
+            action = str(self.action_recognizer.detect_action(skeleton, buffer))
+            if self.predictor_type=='KG':
+                action = self.action_recognizer.get_action(action)
+            action = id_person.__str__() +'-'+ action
+            self.get_logger().info('Action:' + action)  
             action_results.append(action)  
         result = Result()
         result.header = msg.header

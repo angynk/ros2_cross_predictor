@@ -10,6 +10,7 @@ from rclpy.executors import MultiThreadedExecutor
 import yaml
 import ast
 from cross_predictor.kge.kg_predictor import KGPredictor
+from cross_predictor.fuzzy.fuzzy_predictor import FuzzyPredictor
 
 class CrossPredictorAggregator(Node):
     def __init__(self):
@@ -17,7 +18,11 @@ class CrossPredictorAggregator(Node):
         self.received_counts = {"action": 0, "attention": 0, "orientation": 0, "synced": 0, "proximity": 0}
         with open('/home/angie-melo/Documents/PHD/ROS_CARLA/CARLA_PROJECT/ped_predictor_ws/build/cross_predictor/cross_predictor/config.yaml') as f:
             settings = yaml.load(f, Loader=yaml.SafeLoader)
-        self.predictor_kg = KGPredictor(settings)
+        self.predictor_type = settings['PREDICTOR']
+        if self.predictor_type=='KG':
+            self.predictor_kg = KGPredictor(settings)
+        else:
+            self.predictor_fuzzy = FuzzyPredictor(settings)
 
         self.buffer = defaultdict(dict)
         self.timeout_sec = 3.0  # drop incomplete sets
@@ -60,10 +65,16 @@ class CrossPredictorAggregator(Node):
             self.get_logger().error("Mismatched IDs in synchronized messages. Skipping this set.")
             return
         self.get_logger().info(f"Extracted Features: {frame_features}")
-        prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features["1"])
         self.get_logger().error("--- FINAL MERGE ---")
         final = String()
-        final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
+        if self.predictor_type=='KG':
+            prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features["1"])
+            final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
+        else:
+            prob_cross, prediction = self.predictor_fuzzy.predict_action(frame_features["1"])
+            final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} "
+        
+        
         self.get_logger().info(f"Final Result: {final.data}")
         self.get_logger().error("-------------------")
         self.pub.publish(final)

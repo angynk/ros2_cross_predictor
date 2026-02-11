@@ -8,5 +8,5 @@ def pedestrian_gaze(skeleton):
     if skeleton[SKELETON_PEDREC_JOINT.right_eye.value][0] < skeleton[SKELETON_PEDREC_JOINT.nose.value][0]-1:
         if skeleton[SKELETON_PEDREC_JOINT.nose.value][0] < skeleton[SKELETON_PEDREC_JOINT.left_eye.value][0]-1:
             if eye_nose_fraction > 0.3 and eye_nose_fraction < 0.7:
-                looking = 'Looking'
-    return looking
+                return 'Looking', 1
+    return looking, 0
