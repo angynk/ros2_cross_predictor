@@ -28,12 +28,14 @@ setup(
     entry_points={
         'console_scripts': [
             'predictor = cross_predictor.predictor:main',
-            'talker = cross_predictor.publisher_member_function:main',
+            'talker = cross_predictor.publisher_camera:main',
             'orientation = cross_predictor.subscriber_orientation_function:main',
-            'attention = cross_predictor.subscriber_attention_function:main',
-            'action = cross_predictor.subscriber_action_function:main',
-            'proximity = cross_predictor.subscriber_proximity_function:main',
+            'attention = cross_predictor.subscriber_attention_orientation:main',
+            'action = cross_predictor.subscriber_action:main',
+            'proximity = cross_predictor.subscriber_proximity:main',
             'aggregator = cross_predictor.aggregator_predictor_function:main',
+            'radar = cross_predictor.publisher_radar:main',
+            'distance = cross_predictor.subscriber_distance:main',
         ],
     },
 )

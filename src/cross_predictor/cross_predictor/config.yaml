@@ -97,21 +97,21 @@ REFRESH_RATE: 10
 OBSERVATION_FRAMES : 15
 PREDICTION_FRAMES: 15
 FUZZY_INPUTS : 6
-PREDICTOR : "KG" # "KG", "FUZZY", "ENSEMBLE"
+PREDICTOR : "FUZZY" # "KG", "FUZZY", "ENSEMBLE"
 
 ###################################### KG CONFIGURATION ####################################
 KG:
-  model_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/kg/HRI_jaad_feat_004'
+  model_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/kg/PedFeatRulesKG_Jaad_57'
   kg_file: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/kg/JAAD_14K_TRAIN.csv'
   rules: 'None'
   dataset: 'jaad'
   positive_base_rate: 0.70
   epochs_calibration: 80
   batch: 10000
-  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']
+  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation', 'Distance']
 
 ###################################### FUZZY CONFIGURATION ####################################
 FUZZY:
-  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_004.txt'
-  rules_detail_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_004.json'
-  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']
+  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.txt'
+  rules_detail_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.json'
+  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation','Distance']

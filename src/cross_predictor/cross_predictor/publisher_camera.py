@@ -32,9 +32,9 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0191')
+        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
         self.declare_parameter('topic_name', '/image_raw')
-        self.declare_parameter('publish_period', 3.0)
+        self.declare_parameter('publish_period', 2.0)
         self.image_folder = self.get_parameter('image_folder').value
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value

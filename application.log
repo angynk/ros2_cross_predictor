@@ -1,3 +1,8 @@
 INFO - Fingerprint not found. Saved model loading will continue.
 INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
 INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502
+INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502
+INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502
+INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502
+INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502
+INFO - Loaded PoseHRNet (weights: weigths/pose.pth). Num of trainable params: 43638502

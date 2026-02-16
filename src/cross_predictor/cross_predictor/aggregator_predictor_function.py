@@ -24,6 +24,7 @@ class CrossPredictorAggregator(Node):
         else:
             self.predictor_fuzzy = FuzzyPredictor(settings)
 
+        self.latest_distance_label = "Unknown"
         self.buffer = defaultdict(dict)
         self.timeout_sec = 3.0  # drop incomplete sets
 
@@ -37,11 +38,27 @@ class CrossPredictorAggregator(Node):
         self.sub_attention =message_filters.Subscriber(self, Result, '/attention/resultv2', qos_profile=qos)
         self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity/resultv2',qos_profile=qos)
 
+        self.sub_distance= self.create_subscription(
+            Result, 
+            '/proximity/resultv2', 
+            self.distance_callback, 
+            qos_profile=qos)
+
         self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=100,slop=2.0)
         self.ts.registerCallback(self.synchronized_callback)
         
         self.get_logger().info("Aggregator started. Waiting for synchronized Image headers...")
 
+    def distance_callback(self, msg):
+        # Update the global state whenever radar data arrives
+        # Extract 'MiddleDisToEgoVeh' from "['1-MiddleDisToEgoVeh']"
+        try:
+            
+            self.latest_distance_label = ast.literal_eval(msg.result)[0].split('-')[1]
+            if self.predictor_type!='KG':
+                self.latest_distance_label = float(self.latest_distance_label)
+        except:
+            pass
    
     def _increment_count(self, key):
         self.received_counts[key] += 1
@@ -64,6 +81,7 @@ class CrossPredictorAggregator(Node):
         if frame_features is None:
             self.get_logger().error("Mismatched IDs in synchronized messages. Skipping this set.")
             return
+        frame_features["1"]["distance"] = self.latest_distance_label    
         self.get_logger().info(f"Extracted Features: {frame_features}")
         self.get_logger().error("--- FINAL MERGE ---")
         final = String()
