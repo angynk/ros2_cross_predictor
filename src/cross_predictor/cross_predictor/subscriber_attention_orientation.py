@@ -55,19 +55,19 @@ class MinimalSubscriber(Node):
     def listener_callback(self, msg:Image):
         #self.get_logger().info('I heard: "%s"' % msg.height)
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
+        #self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(cv_image)
         attention_results = []
         for result in results:
-            id_person = int(result.boxes.id.numpy()[0])
-            orientation_ling, orientation_value, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            att_ling, att_value = pedestrian_gaze (skeleton)
-            if self.predictor_type=='KG':
-                attention = id_person.__str__() +'-'+att_ling+','+orientation_ling
-            else:
-                attention = id_person.__str__() +'-'+str(att_value)+','+str(orientation_value)
-            self.get_logger().info('Attention: ' + attention)
-            attention_results.append(attention)
+            if result.boxes.id is not None:
+                id_person = int(result.boxes.id.numpy()[0])
+                orientation_ling, orientation_value, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
+                att_ling, att_value = pedestrian_gaze (skeleton)
+                if self.predictor_type=='KG':
+                    attention = id_person.__str__() +'-'+att_ling+','+orientation_ling
+                else:
+                    attention = id_person.__str__() +'-'+str(att_value)+','+str(orientation_value)
+                attention_results.append(attention)
         result = Result()
         result.header = msg.header
         result.header.stamp = msg.header.stamp
@@ -81,10 +81,6 @@ def main(args=None):
     minimal_subscriber = MinimalSubscriber()
 
     rclpy.spin(minimal_subscriber)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
     minimal_subscriber.destroy_node()
     cv2.destroyAllWindows()
     rclpy.shutdown()

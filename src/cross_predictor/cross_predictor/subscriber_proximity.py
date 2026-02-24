@@ -61,19 +61,19 @@ class MinimalSubscriber(Node):
     def listener_callback(self, msg:Image):
         #self.get_logger().info('I heard: "%s"' % msg.height)
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
+        #self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(cv_image)
         proximity_results = []
         for result in results:
-            id_person = int(result.boxes.id.numpy()[0])
-            img_mod = self.road_detector.prepare_img(result.orig_img)
-            self.road_detector.detect_road_context(img_mod,result.orig_img)
-            proximity = str(self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy()))
-            if self.predictor_type=='KG':
-                proximity = self.road_detector.get_proximity(proximity)
-            proximity = id_person.__str__() +'-'+ proximity
-            self.get_logger().info('Proximity: "%s"' % proximity)
-            proximity_results.append(proximity)  
+            if result.boxes.id is not None:
+                id_person = int(result.boxes.id.numpy()[0])
+                img_mod = self.road_detector.prepare_img(result.orig_img)
+                self.road_detector.detect_road_context(img_mod,result.orig_img)
+                proximity = str(self.road_detector.pedestrian_near_road(result.boxes.xyxy[0].cpu().numpy()))
+                if self.predictor_type=='KG':
+                    proximity = self.road_detector.get_proximity(proximity)
+                proximity = id_person.__str__() +'-'+ proximity
+                proximity_results.append(proximity)  
         result = Result()
         result.header = msg.header
         result.header.stamp = msg.header.stamp

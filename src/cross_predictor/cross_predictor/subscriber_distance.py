@@ -21,7 +21,7 @@ class DistanceCalculator(Node):
         qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
                         history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
                         depth=10)
-        self.publisher = self.create_publisher(Result, '/proximity/resultv2', qos)
+        self.publisher = self.create_publisher(Result, '/distance/resultv2', qos)
         self.get_logger().info(f'Subscribed to {self.topic_name}')
 
     def calculate_callback(self, msg):
@@ -44,7 +44,7 @@ class DistanceCalculator(Node):
         #result.header.stamp = msg.header.stamp
         result.result = f"['1-{label}']"
         self.publisher.publish(result)
-        self.get_logger().info(f"Calculated Distance: {raw_dist:.2f}m -> {label}")
+        #self.get_logger().info(f"Calculated Distance: {raw_dist:.2f}m -> {label}")
 
 
 def main(args=None):
@@ -53,10 +53,6 @@ def main(args=None):
     minimal_subscriber = DistanceCalculator()
 
     rclpy.spin(minimal_subscriber)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
     minimal_subscriber.destroy_node()
     rclpy.shutdown()
 

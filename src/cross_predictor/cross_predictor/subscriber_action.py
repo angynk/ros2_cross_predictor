@@ -64,19 +64,19 @@ class MinimalSubscriber(Node):
         #self.get_logger().info('I heard: "%s"' % msg.height)
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
 
-        self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
+        #self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(cv_image)
         action_results = []
         for result in results:
-            id_person = int(result.boxes.id.numpy()[0])
-            _,_, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-            buffer = self.action_recognizer.save_buffer_skeleton(id_person, skeleton)
-            action = str(self.action_recognizer.detect_action(skeleton, buffer))
-            if self.predictor_type=='KG':
-                action = self.action_recognizer.get_action(action)
-            action = id_person.__str__() +'-'+ action
-            self.get_logger().info('Action:' + action)  
-            action_results.append(action)  
+            if result.boxes.id is not None:
+                id_person = int(result.boxes.id.numpy()[0])
+                _,_, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
+                buffer = self.action_recognizer.save_buffer_skeleton(id_person, skeleton)
+                action = str(self.action_recognizer.detect_action(skeleton, buffer))
+                if self.predictor_type=='KG':
+                    action = self.action_recognizer.get_action(action)
+                action = id_person.__str__() +'-'+ action
+                action_results.append(action)  
         result = Result()
         result.header = msg.header
         result.header.stamp = msg.header.stamp
@@ -86,14 +86,8 @@ class MinimalSubscriber(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-
     minimal_subscriber = MinimalSubscriber()
-
     rclpy.spin(minimal_subscriber)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
     minimal_subscriber.destroy_node()
     cv2.destroyAllWindows()
     rclpy.shutdown()

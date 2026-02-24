@@ -8,7 +8,7 @@ class RadarSimulator(Node):
     def __init__(self):
         super().__init__('radar_simulator')
         self.declare_parameter('topic_name', '/radar/raw_data')
-        self.declare_parameter('publish_period', 2.0)
+        self.declare_parameter('publish_period', 0.1)
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value
         qos = QoSProfile(depth=50)

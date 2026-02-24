@@ -32,9 +32,9 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
+        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0055')
         self.declare_parameter('topic_name', '/image_raw')
-        self.declare_parameter('publish_period', 2.0)
+        self.declare_parameter('publish_period', 0.1)
         self.image_folder = self.get_parameter('image_folder').value
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value
@@ -80,23 +80,11 @@ class MinimalPublisher(Node):
         # Move to next image (loop)
         self.index = (self.index + 1) % len(self.image_files)
 
-        '''msg = String()
-        msg.data = 'Hello World: %d' % self.i
-        self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1'''
-
 
 def main(args=None):
     rclpy.init(args=args)
-
     minimal_publisher = MinimalPublisher()
-
     rclpy.spin(minimal_publisher)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
     minimal_publisher.destroy_node()
     rclpy.shutdown()
 
