@@ -3980,3 +3980,1651 @@ INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': 
 INFO - --- FINAL MERGE ---
 INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 
 INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '90.38'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.24 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '191.43'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=1.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '73.29'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.20 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '46.0'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '64.2'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.17 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '74.91'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.20 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '81.85'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.22 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '36.9'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.07 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '350.14'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.19 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.42'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '69.01'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.28 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '49.31'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.09 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '69.51'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.28 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '66.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '65.75'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.18 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '68.79'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.61'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '90.88'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.60 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '91.57'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.66 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '130.83'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.78 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '159.63'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.89 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '160.39'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.89 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '158.31'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.64 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '147.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.85 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '197.29'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '154.37'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '98.08'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '130.26'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.28 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '135.77'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.50 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '126.09'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.71 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '126.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '120.16'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '126.8'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.71 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '134.99'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.72 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '133.09'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.72 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '139.81'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.73 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '132.48'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.72 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '144.95'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.73 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '132.56'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.72 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '116.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.70 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '133.9'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.50 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '107.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.69 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 44, 'attention': 44, 'orientation': 0, 'synced': 45, 'proximity': 44}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '111.7'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.69 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 45, 'attention': 45, 'orientation': 0, 'synced': 46, 'proximity': 45}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '78.93'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.64 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 46, 'attention': 46, 'orientation': 0, 'synced': 47, 'proximity': 46}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '80.86'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 47, 'attention': 47, 'orientation': 0, 'synced': 48, 'proximity': 47}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '92.13'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.44 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 48, 'attention': 48, 'orientation': 0, 'synced': 49, 'proximity': 48}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '81.59'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.42 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 49, 'attention': 49, 'orientation': 0, 'synced': 50, 'proximity': 49}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '87.76'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.44 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 50, 'attention': 50, 'orientation': 0, 'synced': 51, 'proximity': 50}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '70.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 51, 'attention': 51, 'orientation': 0, 'synced': 52, 'proximity': 51}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '67.74'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 52, 'attention': 52, 'orientation': 0, 'synced': 53, 'proximity': 52}
+ERROR - Pedestrian Not Found. Skipping this set.
+INFO - 📊 COUNTS: {'action': 53, 'attention': 53, 'orientation': 0, 'synced': 54, 'proximity': 53}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 54, 'attention': 54, 'orientation': 0, 'synced': 55, 'proximity': 54}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.38 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 55, 'attention': 55, 'orientation': 0, 'synced': 56, 'proximity': 55}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '1', 'orientation': '178.94'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 56, 'attention': 56, 'orientation': 0, 'synced': 57, 'proximity': 56}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '38.41'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.57 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 57, 'attention': 57, 'orientation': 0, 'synced': 58, 'proximity': 57}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '18.04'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.29 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 58, 'attention': 58, 'orientation': 0, 'synced': 59, 'proximity': 58}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '115.12'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 59, 'attention': 59, 'orientation': 0, 'synced': 60, 'proximity': 59}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '68.02'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.14 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 60, 'attention': 60, 'orientation': 0, 'synced': 61, 'proximity': 60}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '85.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.18 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 61, 'attention': 61, 'orientation': 0, 'synced': 62, 'proximity': 61}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '1', 'orientation': '58.42'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 62, 'attention': 62, 'orientation': 0, 'synced': 63, 'proximity': 62}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '73.68'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.60 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 63, 'attention': 63, 'orientation': 0, 'synced': 64, 'proximity': 63}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '13.4'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.02 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 64, 'attention': 64, 'orientation': 0, 'synced': 65, 'proximity': 64}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '10.58'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.27 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 65, 'attention': 65, 'orientation': 0, 'synced': 66, 'proximity': 65}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 66, 'attention': 66, 'orientation': 0, 'synced': 67, 'proximity': 66}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '72.15'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.29 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 67, 'attention': 67, 'orientation': 0, 'synced': 68, 'proximity': 67}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '49.31'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.09 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 68, 'attention': 68, 'orientation': 0, 'synced': 69, 'proximity': 68}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '51.25'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.24 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 69, 'attention': 69, 'orientation': 0, 'synced': 70, 'proximity': 69}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '66.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 70, 'attention': 70, 'orientation': 0, 'synced': 71, 'proximity': 70}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '63.75'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 71, 'attention': 71, 'orientation': 0, 'synced': 72, 'proximity': 71}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '68.79'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 72, 'attention': 72, 'orientation': 0, 'synced': 73, 'proximity': 72}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.61'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 73, 'attention': 73, 'orientation': 0, 'synced': 74, 'proximity': 73}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '90.88'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.60 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 74, 'attention': 74, 'orientation': 0, 'synced': 75, 'proximity': 74}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '99.79'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.63 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 75, 'attention': 75, 'orientation': 0, 'synced': 76, 'proximity': 75}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '130.83'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.78 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 76, 'attention': 76, 'orientation': 0, 'synced': 77, 'proximity': 76}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '109.53'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.71 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 77, 'attention': 77, 'orientation': 0, 'synced': 78, 'proximity': 77}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '160.39'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.89 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 78, 'attention': 78, 'orientation': 0, 'synced': 79, 'proximity': 78}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '138.06'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.80 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 79, 'attention': 79, 'orientation': 0, 'synced': 80, 'proximity': 79}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '147.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.85 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 80, 'attention': 80, 'orientation': 0, 'synced': 81, 'proximity': 80}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '197.43'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 81, 'attention': 81, 'orientation': 0, 'synced': 82, 'proximity': 81}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '66.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.57 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 82, 'attention': 82, 'orientation': 0, 'synced': 83, 'proximity': 82}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '129.46'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.28 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 83, 'attention': 83, 'orientation': 0, 'synced': 84, 'proximity': 83}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '96.65'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 84, 'attention': 84, 'orientation': 0, 'synced': 85, 'proximity': 84}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '123.37'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 85, 'attention': 85, 'orientation': 0, 'synced': 86, 'proximity': 85}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '126.38'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 86, 'attention': 86, 'orientation': 0, 'synced': 87, 'proximity': 86}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '126.09'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.71 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 87, 'attention': 87, 'orientation': 0, 'synced': 88, 'proximity': 87}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '134.96'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.50 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 88, 'attention': 88, 'orientation': 0, 'synced': 89, 'proximity': 88}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '124.48'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 89, 'attention': 89, 'orientation': 0, 'synced': 90, 'proximity': 89}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '126.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 90, 'attention': 90, 'orientation': 0, 'synced': 91, 'proximity': 90}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '135.39'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.50 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 91, 'attention': 91, 'orientation': 0, 'synced': 92, 'proximity': 91}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '125.83'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 92, 'attention': 92, 'orientation': 0, 'synced': 93, 'proximity': 92}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '118.38'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 93, 'attention': 93, 'orientation': 0, 'synced': 94, 'proximity': 93}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '120.16'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 94, 'attention': 94, 'orientation': 0, 'synced': 95, 'proximity': 94}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '131.61'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': '0'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': '2'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '90.38'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': '7'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '191.43'}}, 'prediction': 'crossing', 'crossing_probability': 1.0, 'frame_id': '10'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '91.41'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.25, 'frame_id': '14'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '46.0'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': '17'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '85.23'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.23, 'frame_id': '21'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '74.91'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.2, 'frame_id': '24'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '73.68'}}, 'prediction': 'crossing', 'crossing_probability': 0.6, 'frame_id': '28'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '33.79'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.06, 'frame_id': '31'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '10.58'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': '35'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.5'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3, 'frame_id': '39'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '64.94'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': '42'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '51.25'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': '47'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '61.85'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.38, 'frame_id': '50'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '65.75'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.18, 'frame_id': '54'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '70.44'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': '57'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.61'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': '61'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '90.88'}}, 'prediction': 'crossing', 'crossing_probability': 0.6, 'frame_id': '64'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '91.57'}}, 'prediction': 'crossing', 'crossing_probability': 0.66, 'frame_id': '68'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '178.15'}}, 'prediction': 'crossing', 'crossing_probability': 0.98, 'frame_id': '72'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '109.53'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': '74'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '160.39'}}, 'prediction': 'crossing', 'crossing_probability': 0.89, 'frame_id': '78'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '138.06'}}, 'prediction': 'crossing', 'crossing_probability': 0.8, 'frame_id': '81'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '149.41'}}, 'prediction': 'crossing', 'crossing_probability': 0.86, 'frame_id': '84'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '197.43'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': '88'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '66.24'}}, 'prediction': 'crossing', 'crossing_probability': 0.57, 'frame_id': '91'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '129.46'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': '95'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '96.65'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.25, 'frame_id': '98'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '135.77'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': '102'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '126.38'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': '105'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '124.48'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': '108'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '118.38'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': '112'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '137.99'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': '115'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '124.87'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': '119'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '132.26'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': '122'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '125.34'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': '126'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '128.97'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': '129'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '130.97'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': '133'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '117.41'}}, 'prediction': 'crossing', 'crossing_probability': 0.7, 'frame_id': '137'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '108.44'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': '140'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '131.0'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': '144'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '92.91'}}, 'prediction': 'crossing', 'crossing_probability': 0.67, 'frame_id': '147'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '107.23'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': '148'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 44, 'attention': 44, 'orientation': 0, 'synced': 45, 'proximity': 44}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '98.49'}}, 'prediction': 'crossing', 'crossing_probability': 0.67, 'frame_id': '149'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 45, 'attention': 45, 'orientation': 0, 'synced': 46, 'proximity': 45}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '106.25'}}, 'prediction': 'crossing', 'crossing_probability': 0.68, 'frame_id': '150'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 46, 'attention': 46, 'orientation': 0, 'synced': 47, 'proximity': 46}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '91.24'}}, 'prediction': 'crossing', 'crossing_probability': 0.67, 'frame_id': '151'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 47, 'attention': 47, 'orientation': 0, 'synced': 48, 'proximity': 47}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '111.7'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': '152'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 48, 'attention': 48, 'orientation': 0, 'synced': 49, 'proximity': 48}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '99.66'}}, 'prediction': 'crossing', 'crossing_probability': 0.68, 'frame_id': '153'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 49, 'attention': 49, 'orientation': 0, 'synced': 50, 'proximity': 49}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '85.11'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': '154'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 50, 'attention': 50, 'orientation': 0, 'synced': 51, 'proximity': 50}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '78.93'}}, 'prediction': 'crossing', 'crossing_probability': 0.64, 'frame_id': '155'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 51, 'attention': 51, 'orientation': 0, 'synced': 52, 'proximity': 51}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '74.42'}}, 'prediction': 'crossing', 'crossing_probability': 0.64, 'frame_id': '156'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': '0'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': '2'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '178.94'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': '6'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '191.43'}}, 'prediction': 'crossing', 'crossing_probability': 1.0, 'frame_id': '10'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '73.29'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.2, 'frame_id': '13'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '46.0'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': '17'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '64.2'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.17, 'frame_id': '20'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '74.91'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.2, 'frame_id': '24'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '81.85'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.22, 'frame_id': '27'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '36.9'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07, 'frame_id': '30'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '12.91'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': '33'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.42'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3, 'frame_id': '37'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '69.01'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': '40'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '49.31'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.09, 'frame_id': '44'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '51.25'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': '47'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '61.85'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.38, 'frame_id': '50'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '65.75'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.18, 'frame_id': '54'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '70.44'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.19, 'frame_id': '57'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.61'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': '61'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '90.88'}}, 'prediction': 'crossing', 'crossing_probability': 0.6, 'frame_id': '64'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '99.79'}}, 'prediction': 'crossing', 'crossing_probability': 0.63, 'frame_id': '67'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '100.34'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': '70'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '109.53'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': '74'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '188.1'}}, 'prediction': 'crossing', 'crossing_probability': 0.66, 'frame_id': '77'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '138.06'}}, 'prediction': 'crossing', 'crossing_probability': 0.8, 'frame_id': '81'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '149.41'}}, 'prediction': 'crossing', 'crossing_probability': 0.86, 'frame_id': '84'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '197.43'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': '88'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '66.24'}}, 'prediction': 'crossing', 'crossing_probability': 0.57, 'frame_id': '91'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '120.8'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': '94'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '129.46'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': '95'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '98.08'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.25, 'frame_id': '96'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '105.53'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.26, 'frame_id': '97'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '96.65'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.25, 'frame_id': '98'}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 0}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 1}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '178.94'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 2}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '38.41'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.47, 'frame_id': 3}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '18.04'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.04, 'frame_id': 4}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '44.39'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': 5}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '68.02'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.18, 'frame_id': 6}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '51.04'}}, 'prediction': 'crossing', 'crossing_probability': 0.51, 'frame_id': 7}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '89.52'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': 8}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '87.74'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.32, 'frame_id': 9}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '12.91'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': 10}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '82.13'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.31, 'frame_id': 11}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.5'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3, 'frame_id': 12}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '48.9'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.09, 'frame_id': 13}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '48.71'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.23, 'frame_id': 14}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '61.85'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.38, 'frame_id': 15}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '63.99'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.39, 'frame_id': 16}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '69.08'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': 17}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '66.23'}}, 'prediction': 'crossing', 'crossing_probability': 0.62, 'frame_id': 18}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.74'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': 19}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '105.2'}}, 'prediction': 'crossing', 'crossing_probability': 0.68, 'frame_id': 20}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '109.62'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 21}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '94.76'}}, 'prediction': 'crossing', 'crossing_probability': 0.67, 'frame_id': 22}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '188.42'}}, 'prediction': 'crossing', 'crossing_probability': 0.66, 'frame_id': 23}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '191.18'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': 24}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '158.94'}}, 'prediction': 'crossing', 'crossing_probability': 0.9, 'frame_id': 25}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '134.63'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': 26}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '1', 'orientation': '204.51'}}, 'prediction': 'crossing', 'crossing_probability': 0.78, 'frame_id': 27}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '129.46'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': 28}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '130.26'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': 29}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '123.34'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': 30}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '126.09'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 31}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '135.39'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': 32}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '131.61'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': 33}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '133.13'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 34}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '132.26'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 35}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '125.34'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 36}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '128.85'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 37}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '134.63'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 38}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '108.44'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': 39}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '133.9'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': 40}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '91.24'}}, 'prediction': 'crossing', 'crossing_probability': 0.67, 'frame_id': 41}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '74.42'}}, 'prediction': 'crossing', 'crossing_probability': 0.64, 'frame_id': 42}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '84.64'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.43, 'frame_id': 43}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 44, 'attention': 44, 'orientation': 0, 'synced': 45, 'proximity': 44}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '87.26'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.43, 'frame_id': 44}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 45, 'attention': 45, 'orientation': 0, 'synced': 46, 'proximity': 45}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '87.76'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44, 'frame_id': 45}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 46, 'attention': 46, 'orientation': 0, 'synced': 47, 'proximity': 46}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '83.42'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.43, 'frame_id': 46}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 47, 'attention': 47, 'orientation': 0, 'synced': 48, 'proximity': 47}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '135.3'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': 47}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 48, 'attention': 48, 'orientation': 0, 'synced': 49, 'proximity': 48}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '70.23'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': 48}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 49, 'attention': 49, 'orientation': 0, 'synced': 50, 'proximity': 49}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '72.14'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': 49}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 50, 'attention': 50, 'orientation': 0, 'synced': 51, 'proximity': 50}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '289.5'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.33, 'frame_id': 50}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 51, 'attention': 51, 'orientation': 0, 'synced': 52, 'proximity': 51}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '303.96'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.33, 'frame_id': 51}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 52, 'attention': 52, 'orientation': 0, 'synced': 53, 'proximity': 52}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '67.74'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': 52}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 53, 'attention': 53, 'orientation': 0, 'synced': 54, 'proximity': 53}
+ERROR - Pedestrian Not Found. Skipping this set.
+INFO - 📊 COUNTS: {'action': 54, 'attention': 54, 'orientation': 0, 'synced': 55, 'proximity': 54}
+ERROR - Pedestrian Not Found. Skipping this set.
+INFO - 📊 COUNTS: {'action': 55, 'attention': 55, 'orientation': 0, 'synced': 56, 'proximity': 55}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '8.7'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.26, 'frame_id': 55}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 0}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 1}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 2}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07281792, 'frame_id': 3}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 4}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 5}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 6}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 7}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 8}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 9}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.500696, 'frame_id': 10}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 11}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 12}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 13}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 14}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 15}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 16}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 17}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 18}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 19}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 20}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 21}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 22}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 23}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.41941094, 'frame_id': 24}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 25}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 26}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 27}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 28}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 29}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 30}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 31}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 32}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 33}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 34}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 35}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 36}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 37}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 38}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 39}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 40}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 41}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 42}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 43}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 44, 'attention': 44, 'orientation': 0, 'synced': 45, 'proximity': 44}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 44}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 45, 'attention': 45, 'orientation': 0, 'synced': 46, 'proximity': 45}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 45}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 46, 'attention': 46, 'orientation': 0, 'synced': 47, 'proximity': 46}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 46}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 47, 'attention': 47, 'orientation': 0, 'synced': 48, 'proximity': 47}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 47}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 48, 'attention': 48, 'orientation': 0, 'synced': 49, 'proximity': 48}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 48}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 49, 'attention': 49, 'orientation': 0, 'synced': 50, 'proximity': 49}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 49}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 50, 'attention': 50, 'orientation': 0, 'synced': 51, 'proximity': 50}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 50}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 51, 'attention': 51, 'orientation': 0, 'synced': 52, 'proximity': 51}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 51}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 52, 'attention': 52, 'orientation': 0, 'synced': 53, 'proximity': 52}
+ERROR - Pedestrian Not Found. Skipping this set.
+INFO - 📊 COUNTS: {'action': 53, 'attention': 53, 'orientation': 0, 'synced': 54, 'proximity': 53}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 53}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 54, 'attention': 54, 'orientation': 0, 'synced': 55, 'proximity': 54}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 54}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 55, 'attention': 55, 'orientation': 0, 'synced': 56, 'proximity': 55}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.41941094, 'frame_id': 55}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 56, 'attention': 56, 'orientation': 0, 'synced': 57, 'proximity': 56}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07281792, 'frame_id': 56}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 57, 'attention': 57, 'orientation': 0, 'synced': 58, 'proximity': 57}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 57}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 58, 'attention': 58, 'orientation': 0, 'synced': 59, 'proximity': 58}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 58}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 59, 'attention': 59, 'orientation': 0, 'synced': 60, 'proximity': 59}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 59}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 60, 'attention': 60, 'orientation': 0, 'synced': 61, 'proximity': 60}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 60}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 61, 'attention': 61, 'orientation': 0, 'synced': 62, 'proximity': 61}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 61}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 62, 'attention': 62, 'orientation': 0, 'synced': 63, 'proximity': 62}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 62}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 63, 'attention': 63, 'orientation': 0, 'synced': 64, 'proximity': 63}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 63}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 64, 'attention': 64, 'orientation': 0, 'synced': 65, 'proximity': 64}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 64}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 65, 'attention': 65, 'orientation': 0, 'synced': 66, 'proximity': 65}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 65}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 66, 'attention': 66, 'orientation': 0, 'synced': 67, 'proximity': 66}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 66}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 67, 'attention': 67, 'orientation': 0, 'synced': 68, 'proximity': 67}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 67}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 68, 'attention': 68, 'orientation': 0, 'synced': 69, 'proximity': 68}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 68}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 69, 'attention': 69, 'orientation': 0, 'synced': 70, 'proximity': 69}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 69}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 70, 'attention': 70, 'orientation': 0, 'synced': 71, 'proximity': 70}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 70}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 71, 'attention': 71, 'orientation': 0, 'synced': 72, 'proximity': 71}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 71}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 72, 'attention': 72, 'orientation': 0, 'synced': 73, 'proximity': 72}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 72}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 73, 'attention': 73, 'orientation': 0, 'synced': 74, 'proximity': 73}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 73}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 74, 'attention': 74, 'orientation': 0, 'synced': 75, 'proximity': 74}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 74}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 75, 'attention': 75, 'orientation': 0, 'synced': 76, 'proximity': 75}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 75}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 76, 'attention': 76, 'orientation': 0, 'synced': 77, 'proximity': 76}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 76}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 77, 'attention': 77, 'orientation': 0, 'synced': 78, 'proximity': 77}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 77}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 78, 'attention': 78, 'orientation': 0, 'synced': 79, 'proximity': 78}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 78}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 79, 'attention': 79, 'orientation': 0, 'synced': 80, 'proximity': 79}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 79}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 80, 'attention': 80, 'orientation': 0, 'synced': 81, 'proximity': 80}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 80}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 81, 'attention': 81, 'orientation': 0, 'synced': 82, 'proximity': 81}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 81}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 82, 'attention': 82, 'orientation': 0, 'synced': 83, 'proximity': 82}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 82}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 83, 'attention': 83, 'orientation': 0, 'synced': 84, 'proximity': 83}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 83}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 84, 'attention': 84, 'orientation': 0, 'synced': 85, 'proximity': 84}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 84}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 85, 'attention': 85, 'orientation': 0, 'synced': 86, 'proximity': 85}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 85}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 86, 'attention': 86, 'orientation': 0, 'synced': 87, 'proximity': 86}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 86}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 87, 'attention': 87, 'orientation': 0, 'synced': 88, 'proximity': 87}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 87}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 88, 'attention': 88, 'orientation': 0, 'synced': 89, 'proximity': 88}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 88}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 89, 'attention': 89, 'orientation': 0, 'synced': 90, 'proximity': 89}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 89}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 90, 'attention': 90, 'orientation': 0, 'synced': 91, 'proximity': 90}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 90}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 91, 'attention': 91, 'orientation': 0, 'synced': 92, 'proximity': 91}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 91}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 92, 'attention': 92, 'orientation': 0, 'synced': 93, 'proximity': 92}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 92}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 93, 'attention': 93, 'orientation': 0, 'synced': 94, 'proximity': 93}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 93}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 94, 'attention': 94, 'orientation': 0, 'synced': 95, 'proximity': 94}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 94}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 95, 'attention': 95, 'orientation': 0, 'synced': 96, 'proximity': 95}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 95}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 96, 'attention': 96, 'orientation': 0, 'synced': 97, 'proximity': 96}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 96}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 97, 'attention': 97, 'orientation': 0, 'synced': 98, 'proximity': 97}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 97}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 98, 'attention': 98, 'orientation': 0, 'synced': 99, 'proximity': 98}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 98}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 99, 'attention': 99, 'orientation': 0, 'synced': 100, 'proximity': 99}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 99}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 100, 'attention': 100, 'orientation': 0, 'synced': 101, 'proximity': 100}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 100}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 101, 'attention': 101, 'orientation': 0, 'synced': 102, 'proximity': 101}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 101}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 102, 'attention': 102, 'orientation': 0, 'synced': 103, 'proximity': 102}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 102}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 103, 'attention': 103, 'orientation': 0, 'synced': 104, 'proximity': 103}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 103}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 104, 'attention': 104, 'orientation': 0, 'synced': 105, 'proximity': 104}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 104}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 105, 'attention': 105, 'orientation': 0, 'synced': 106, 'proximity': 105}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 105}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 106, 'attention': 106, 'orientation': 0, 'synced': 107, 'proximity': 106}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 106}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 107, 'attention': 107, 'orientation': 0, 'synced': 108, 'proximity': 107}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 107}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 108, 'attention': 108, 'orientation': 0, 'synced': 109, 'proximity': 108}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 108}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 109, 'attention': 109, 'orientation': 0, 'synced': 110, 'proximity': 109}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 109}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 110, 'attention': 110, 'orientation': 0, 'synced': 111, 'proximity': 110}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 110}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 111, 'attention': 111, 'orientation': 0, 'synced': 112, 'proximity': 111}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 111}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 112, 'attention': 112, 'orientation': 0, 'synced': 113, 'proximity': 112}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 112}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 113, 'attention': 113, 'orientation': 0, 'synced': 114, 'proximity': 113}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 113}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 114, 'attention': 114, 'orientation': 0, 'synced': 115, 'proximity': 114}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 114}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 115, 'attention': 115, 'orientation': 0, 'synced': 116, 'proximity': 115}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 115}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 116, 'attention': 116, 'orientation': 0, 'synced': 117, 'proximity': 116}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 116}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 117, 'attention': 117, 'orientation': 0, 'synced': 118, 'proximity': 117}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 117}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 118, 'attention': 118, 'orientation': 0, 'synced': 119, 'proximity': 118}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 118}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 119, 'attention': 119, 'orientation': 0, 'synced': 120, 'proximity': 119}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 119}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 120, 'attention': 120, 'orientation': 0, 'synced': 121, 'proximity': 120}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 120}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 121, 'attention': 121, 'orientation': 0, 'synced': 122, 'proximity': 121}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 121}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 122, 'attention': 122, 'orientation': 0, 'synced': 123, 'proximity': 122}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 122}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 123, 'attention': 123, 'orientation': 0, 'synced': 124, 'proximity': 123}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 123}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 124, 'attention': 124, 'orientation': 0, 'synced': 125, 'proximity': 124}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 124}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 125, 'attention': 125, 'orientation': 0, 'synced': 126, 'proximity': 125}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 125}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 126, 'attention': 126, 'orientation': 0, 'synced': 127, 'proximity': 126}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 126}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 127, 'attention': 127, 'orientation': 0, 'synced': 128, 'proximity': 127}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 127}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 128, 'attention': 128, 'orientation': 0, 'synced': 129, 'proximity': 128}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 128}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 129, 'attention': 129, 'orientation': 0, 'synced': 130, 'proximity': 129}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 129}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 130, 'attention': 130, 'orientation': 0, 'synced': 131, 'proximity': 130}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 130}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 131, 'attention': 131, 'orientation': 0, 'synced': 132, 'proximity': 131}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 131}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 132, 'attention': 132, 'orientation': 0, 'synced': 133, 'proximity': 132}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 132}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 133, 'attention': 133, 'orientation': 0, 'synced': 134, 'proximity': 133}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 133}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 134, 'attention': 134, 'orientation': 0, 'synced': 135, 'proximity': 134}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 134}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 135, 'attention': 135, 'orientation': 0, 'synced': 136, 'proximity': 135}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 135}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 136, 'attention': 136, 'orientation': 0, 'synced': 137, 'proximity': 136}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 136}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 137, 'attention': 137, 'orientation': 0, 'synced': 138, 'proximity': 137}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 137}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 138, 'attention': 138, 'orientation': 0, 'synced': 139, 'proximity': 138}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 138}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 139, 'attention': 139, 'orientation': 0, 'synced': 140, 'proximity': 139}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 139}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 140, 'attention': 140, 'orientation': 0, 'synced': 141, 'proximity': 140}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 140}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 141, 'attention': 141, 'orientation': 0, 'synced': 142, 'proximity': 141}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 141}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 142, 'attention': 142, 'orientation': 0, 'synced': 143, 'proximity': 142}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 142}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 143, 'attention': 143, 'orientation': 0, 'synced': 144, 'proximity': 143}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 143}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 144, 'attention': 144, 'orientation': 0, 'synced': 145, 'proximity': 144}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 144}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 145, 'attention': 145, 'orientation': 0, 'synced': 146, 'proximity': 145}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 145}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 146, 'attention': 146, 'orientation': 0, 'synced': 147, 'proximity': 146}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 146}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 147, 'attention': 147, 'orientation': 0, 'synced': 148, 'proximity': 147}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 147}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 148, 'attention': 148, 'orientation': 0, 'synced': 149, 'proximity': 148}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 148}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 149, 'attention': 149, 'orientation': 0, 'synced': 150, 'proximity': 149}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 149}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 150, 'attention': 150, 'orientation': 0, 'synced': 151, 'proximity': 150}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 150}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 151, 'attention': 151, 'orientation': 0, 'synced': 152, 'proximity': 151}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 151}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 152, 'attention': 152, 'orientation': 0, 'synced': 153, 'proximity': 152}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 152}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 153, 'attention': 153, 'orientation': 0, 'synced': 154, 'proximity': 153}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 153}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 154, 'attention': 154, 'orientation': 0, 'synced': 155, 'proximity': 154}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 154}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 155, 'attention': 155, 'orientation': 0, 'synced': 156, 'proximity': 155}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 155}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 156, 'attention': 156, 'orientation': 0, 'synced': 157, 'proximity': 156}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 156}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 157, 'attention': 157, 'orientation': 0, 'synced': 158, 'proximity': 157}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.500696, 'frame_id': 157}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 158, 'attention': 158, 'orientation': 0, 'synced': 159, 'proximity': 158}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 158}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 159, 'attention': 159, 'orientation': 0, 'synced': 160, 'proximity': 159}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 159}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 160, 'attention': 160, 'orientation': 0, 'synced': 161, 'proximity': 160}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 160}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 161, 'attention': 161, 'orientation': 0, 'synced': 162, 'proximity': 161}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 161}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 162, 'attention': 162, 'orientation': 0, 'synced': 163, 'proximity': 162}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07281792, 'frame_id': 162}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 163, 'attention': 163, 'orientation': 0, 'synced': 164, 'proximity': 163}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 163}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 164, 'attention': 164, 'orientation': 0, 'synced': 165, 'proximity': 164}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 164}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 165, 'attention': 165, 'orientation': 0, 'synced': 166, 'proximity': 165}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 165}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 166, 'attention': 166, 'orientation': 0, 'synced': 167, 'proximity': 166}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9477248, 'frame_id': 166}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 167, 'attention': 167, 'orientation': 0, 'synced': 168, 'proximity': 167}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 167}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 168, 'attention': 168, 'orientation': 0, 'synced': 169, 'proximity': 168}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 168}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 169, 'attention': 169, 'orientation': 0, 'synced': 170, 'proximity': 169}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.500696, 'frame_id': 169}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 170, 'attention': 170, 'orientation': 0, 'synced': 171, 'proximity': 170}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 170}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 171, 'attention': 171, 'orientation': 0, 'synced': 172, 'proximity': 171}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 171}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 172, 'attention': 172, 'orientation': 0, 'synced': 173, 'proximity': 172}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 172}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 173, 'attention': 173, 'orientation': 0, 'synced': 174, 'proximity': 173}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 173}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 174, 'attention': 174, 'orientation': 0, 'synced': 175, 'proximity': 174}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 174}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 175, 'attention': 175, 'orientation': 0, 'synced': 176, 'proximity': 175}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 175}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 176, 'attention': 176, 'orientation': 0, 'synced': 177, 'proximity': 176}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 176}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 177, 'attention': 177, 'orientation': 0, 'synced': 178, 'proximity': 177}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 177}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 178, 'attention': 178, 'orientation': 0, 'synced': 179, 'proximity': 178}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 178}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 179, 'attention': 179, 'orientation': 0, 'synced': 180, 'proximity': 179}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 179}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 180, 'attention': 180, 'orientation': 0, 'synced': 181, 'proximity': 180}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 180}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 181, 'attention': 181, 'orientation': 0, 'synced': 182, 'proximity': 181}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 181}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 0}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '198.19'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 1}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '178.94'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.0, 'frame_id': 2}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '191.43'}}, 'prediction': 'crossing', 'crossing_probability': 1.0, 'frame_id': 3}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '73.29'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.2, 'frame_id': 4}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '44.39'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.49, 'frame_id': 5}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '64.2'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.17, 'frame_id': 6}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '42.81'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': 7}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '89.52'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': 8}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '36.9'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07, 'frame_id': 9}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '12.91'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': 10}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.42'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3, 'frame_id': 11}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '69.01'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': 12}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '48.9'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.09, 'frame_id': 13}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '51.25'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.24, 'frame_id': 14}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '61.85'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.38, 'frame_id': 15}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '63.99'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.39, 'frame_id': 16}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '70.44'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.4, 'frame_id': 17}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '75.32'}}, 'prediction': 'crossing', 'crossing_probability': 0.64, 'frame_id': 18}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.74'}}, 'prediction': 'crossing', 'crossing_probability': 0.65, 'frame_id': 19}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '99.79'}}, 'prediction': 'crossing', 'crossing_probability': 0.63, 'frame_id': 20}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '100.34'}}, 'prediction': 'crossing', 'crossing_probability': 0.69, 'frame_id': 21}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '109.53'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 22}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '188.1'}}, 'prediction': 'crossing', 'crossing_probability': 0.66, 'frame_id': 23}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '1', 'orientation': '181.79'}}, 'prediction': 'crossing', 'crossing_probability': 0.8, 'frame_id': 24}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '149.41'}}, 'prediction': 'crossing', 'crossing_probability': 0.86, 'frame_id': 25}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '134.63'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.28, 'frame_id': 26}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - {'features': {'1': {'action': '1', 'proximity': '0', 'attention': '1', 'orientation': '204.51'}}, 'prediction': 'crossing', 'crossing_probability': 0.78, 'frame_id': 27}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - {'features': {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '120.8'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': 28}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '105.53'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.26, 'frame_id': 29}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - {'features': {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '122.28'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.27, 'frame_id': 30}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '123.34'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': 31}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '134.96'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': 32}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - {'features': {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '135.39'}}, 'prediction': 'crossing', 'crossing_probability': 0.5, 'frame_id': 33}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - {'features': {'1': {'action': '3', 'proximity': '2', 'attention': '0', 'orientation': '120.16'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.48, 'frame_id': 34}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '126.8'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 35}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '134.99'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 36}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '133.09'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 37}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '139.81'}}, 'prediction': 'crossing', 'crossing_probability': 0.73, 'frame_id': 38}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '128.85'}}, 'prediction': 'crossing', 'crossing_probability': 0.71, 'frame_id': 39}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '141.14'}}, 'prediction': 'crossing', 'crossing_probability': 0.73, 'frame_id': 40}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '130.97'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 41}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '144.95'}}, 'prediction': 'crossing', 'crossing_probability': 0.73, 'frame_id': 42}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - {'features': {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '134.63'}}, 'prediction': 'crossing', 'crossing_probability': 0.72, 'frame_id': 43}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 0}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 1}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.41941094, 'frame_id': 2}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.07281792, 'frame_id': 3}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 4}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 5}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 6}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 7}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.44152778, 'frame_id': 8}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 9}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 10}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 11}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 12}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 13}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 14}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 15}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 16}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 17}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 18}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection'}}, 'prediction': 'crossing', 'crossing_probability': 0.9268977, 'frame_id': 19}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - {'features': {'1': {'action': 'Walk', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.47140262, 'frame_id': 20}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 21}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 22}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 23}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.3863896, 'frame_id': 24}
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - {'features': {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection'}}, 'prediction': 'not-crossing', 'crossing_probability': 0.14346911, 'frame_id': 25}
+INFO - -------------------

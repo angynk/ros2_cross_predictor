@@ -77,6 +77,7 @@ class CrossPredictorAggregator(Node):
 
     def synchronized_callback(self, msg_action, msg_attention, msg_proximity):
         # Retrieve the strings we hid in the frame_id
+        output = {"features": {}, "prediction": None, "crossing_probability": 0.0, "frame_id": self.received_counts["synced"]}  # Add frame_id for tracking
         self.received_counts["synced"] += 1
         self.logger.info(f"📊 COUNTS: {self.received_counts}")
         self._increment_count("action")
@@ -92,8 +93,7 @@ class CrossPredictorAggregator(Node):
             return
         '''for key in frame_features:
             frame_features[key]["distance"] = self.latest_distance_label'''
-        self.logger.info(f"Extracted Features: {frame_features}")
-        self.logger.info("--- FINAL MERGE ---")
+        output["features"] = frame_features
         final = String()
         if self.predictor_type=='KG':
             prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features["1"])
@@ -102,8 +102,9 @@ class CrossPredictorAggregator(Node):
             prob_cross, prediction = self.predictor_fuzzy.predict_action(frame_features["1"])
             final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} "
         
-        
-        self.logger.info(f"Final Result: {final.data}")
+        output["prediction"] = prediction
+        output["crossing_probability"] = prob_cross
+        self.logger.info(output)
         self.logger.info("-------------------")
         self.pub.publish(final)
 

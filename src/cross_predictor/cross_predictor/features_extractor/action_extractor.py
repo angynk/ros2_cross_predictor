@@ -70,6 +70,7 @@ class ActionRecognizer ():
         return value
     
     def get_action(self, action):
+        action = int(action)
         if action == 0 or action == 2:    #Stand and Wave
             return 'Stand'
         elif action == 1 or action == 3: #Walk and Run

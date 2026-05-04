@@ -97,7 +97,7 @@ REFRESH_RATE: 10
 OBSERVATION_FRAMES : 15
 PREDICTION_FRAMES: 15
 FUZZY_INPUTS : 6
-PREDICTOR : "FUZZY" # "KG", "FUZZY", "ENSEMBLE"
+PREDICTOR : "KG" # "KG", "FUZZY", "ENSEMBLE"
 
 ###################################### KG CONFIGURATION ####################################
 KG:
@@ -108,7 +108,7 @@ KG:
   positive_base_rate: 0.70
   epochs_calibration: 80
   batch: 10000
-  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation', 'Distance']
+  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']
 
 ###################################### FUZZY CONFIGURATION ####################################
 FUZZY:
