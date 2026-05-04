@@ -3480,3 +3480,503 @@ INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': 
 INFO - --- FINAL MERGE ---
 INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
 INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 | PROB_NOCROSS=0.61
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 | PROB_NOCROSS=0.51
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 33, 'attention': 33, 'orientation': 0, 'synced': 34, 'proximity': 33}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 34, 'attention': 34, 'orientation': 0, 'synced': 35, 'proximity': 34}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 35, 'attention': 35, 'orientation': 0, 'synced': 36, 'proximity': 35}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 36, 'attention': 36, 'orientation': 0, 'synced': 37, 'proximity': 36}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 37, 'attention': 37, 'orientation': 0, 'synced': 38, 'proximity': 37}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 38, 'attention': 38, 'orientation': 0, 'synced': 39, 'proximity': 38}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 39, 'attention': 39, 'orientation': 0, 'synced': 40, 'proximity': 39}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 | PROB_NOCROSS=0.75
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 40, 'attention': 40, 'orientation': 0, 'synced': 41, 'proximity': 40}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 41, 'attention': 41, 'orientation': 0, 'synced': 42, 'proximity': 41}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 42, 'attention': 42, 'orientation': 0, 'synced': 43, 'proximity': 42}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 43, 'attention': 43, 'orientation': 0, 'synced': 44, 'proximity': 43}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'TooNearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.18 | PROB_NOCROSS=0.82
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 44, 'attention': 44, 'orientation': 0, 'synced': 45, 'proximity': 44}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'TooNearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.18 | PROB_NOCROSS=0.82
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 45, 'attention': 45, 'orientation': 0, 'synced': 46, 'proximity': 45}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 46, 'attention': 46, 'orientation': 0, 'synced': 47, 'proximity': 46}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 47, 'attention': 47, 'orientation': 0, 'synced': 48, 'proximity': 47}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 48, 'attention': 48, 'orientation': 0, 'synced': 49, 'proximity': 48}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 49, 'attention': 49, 'orientation': 0, 'synced': 50, 'proximity': 49}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 50, 'attention': 50, 'orientation': 0, 'synced': 51, 'proximity': 50}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 51, 'attention': 51, 'orientation': 0, 'synced': 52, 'proximity': 51}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 52, 'attention': 52, 'orientation': 0, 'synced': 53, 'proximity': 52}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 53, 'attention': 53, 'orientation': 0, 'synced': 54, 'proximity': 53}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 54, 'attention': 54, 'orientation': 0, 'synced': 55, 'proximity': 54}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 | PROB_NOCROSS=0.51
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 55, 'attention': 55, 'orientation': 0, 'synced': 56, 'proximity': 55}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 56, 'attention': 56, 'orientation': 0, 'synced': 57, 'proximity': 56}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 57, 'attention': 57, 'orientation': 0, 'synced': 58, 'proximity': 57}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'Looking', 'orientation': 'OppositeVehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.01 | PROB_NOCROSS=0.99
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 58, 'attention': 58, 'orientation': 0, 'synced': 59, 'proximity': 58}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 59, 'attention': 59, 'orientation': 0, 'synced': 60, 'proximity': 59}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 | PROB_NOCROSS=0.74
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 60, 'attention': 60, 'orientation': 0, 'synced': 61, 'proximity': 60}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'LeftDirection', 'distance': 'NearToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.35 | PROB_NOCROSS=0.65
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 61, 'attention': 61, 'orientation': 0, 'synced': 62, 'proximity': 61}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 62, 'attention': 62, 'orientation': 0, 'synced': 63, 'proximity': 62}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 63, 'attention': 63, 'orientation': 0, 'synced': 64, 'proximity': 63}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 64, 'attention': 64, 'orientation': 0, 'synced': 65, 'proximity': 64}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 65, 'attention': 65, 'orientation': 0, 'synced': 66, 'proximity': 65}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'VehDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.03 | PROB_NOCROSS=0.97
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 66, 'attention': 66, 'orientation': 0, 'synced': 67, 'proximity': 66}
+INFO - Extracted Features: {'1': {'action': 'Na', 'proximity': 'FarFromCurb', 'attention': 'NotLooking', 'orientation': 'RigthDirection', 'distance': 'MiddleDisToEgoVeh'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.47 | PROB_NOCROSS=0.53
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 0, 'attention': 0, 'orientation': 0, 'synced': 1, 'proximity': 0}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '189.66'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 1, 'attention': 1, 'orientation': 0, 'synced': 2, 'proximity': 1}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '1', 'orientation': '200.46'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 2, 'attention': 2, 'orientation': 0, 'synced': 3, 'proximity': 2}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '90.38'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.24 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 3, 'attention': 3, 'orientation': 0, 'synced': 4, 'proximity': 3}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '191.43'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=1.00 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 4, 'attention': 4, 'orientation': 0, 'synced': 5, 'proximity': 4}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '73.29'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.20 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 5, 'attention': 5, 'orientation': 0, 'synced': 6, 'proximity': 5}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '46.0'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.49 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 6, 'attention': 6, 'orientation': 0, 'synced': 7, 'proximity': 6}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '64.2'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.17 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 7, 'attention': 7, 'orientation': 0, 'synced': 8, 'proximity': 7}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '74.91'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.20 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 8, 'attention': 8, 'orientation': 0, 'synced': 9, 'proximity': 8}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '81.85'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.22 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 9, 'attention': 9, 'orientation': 0, 'synced': 10, 'proximity': 9}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '36.9'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.07 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 10, 'attention': 10, 'orientation': 0, 'synced': 11, 'proximity': 10}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '350.14'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.19 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 11, 'attention': 11, 'orientation': 0, 'synced': 12, 'proximity': 11}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '78.42'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 12, 'attention': 12, 'orientation': 0, 'synced': 13, 'proximity': 12}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '72.15'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.29 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 13, 'attention': 13, 'orientation': 0, 'synced': 14, 'proximity': 13}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '2', 'attention': '0', 'orientation': '49.31'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.09 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 14, 'attention': 14, 'orientation': 0, 'synced': 15, 'proximity': 14}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '1', 'attention': '0', 'orientation': '51.25'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.24 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 15, 'attention': 15, 'orientation': 0, 'synced': 16, 'proximity': 15}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '66.23'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.39 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 16, 'attention': 16, 'orientation': 0, 'synced': 17, 'proximity': 16}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '65.75'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.18 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 17, 'attention': 17, 'orientation': 0, 'synced': 18, 'proximity': 17}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '1', 'attention': '0', 'orientation': '70.44'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.40 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 18, 'attention': 18, 'orientation': 0, 'synced': 19, 'proximity': 18}
+INFO - Extracted Features: {'1': {'action': '3', 'proximity': '0', 'attention': '0', 'orientation': '82.61'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 19, 'attention': 19, 'orientation': 0, 'synced': 20, 'proximity': 19}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '90.88'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.60 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 20, 'attention': 20, 'orientation': 0, 'synced': 21, 'proximity': 20}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '91.57'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.66 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 21, 'attention': 21, 'orientation': 0, 'synced': 22, 'proximity': 21}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '130.83'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.78 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 22, 'attention': 22, 'orientation': 0, 'synced': 23, 'proximity': 22}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '159.63'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.89 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 23, 'attention': 23, 'orientation': 0, 'synced': 24, 'proximity': 23}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '160.39'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.89 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 24, 'attention': 24, 'orientation': 0, 'synced': 25, 'proximity': 24}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '138.06'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.80 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 25, 'attention': 25, 'orientation': 0, 'synced': 26, 'proximity': 25}
+INFO - Extracted Features: {'1': {'action': '1', 'proximity': '0', 'attention': '0', 'orientation': '147.24'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.85 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 26, 'attention': 26, 'orientation': 0, 'synced': 27, 'proximity': 26}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '1', 'orientation': '197.43'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=crossing | PROB_CROSS=0.65 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 27, 'attention': 27, 'orientation': 0, 'synced': 28, 'proximity': 27}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '0', 'attention': '0', 'orientation': '43.38'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.48 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 28, 'attention': 28, 'orientation': 0, 'synced': 29, 'proximity': 28}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '154.37'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.30 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 29, 'attention': 29, 'orientation': 0, 'synced': 30, 'proximity': 29}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '120.8'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.27 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 30, 'attention': 30, 'orientation': 0, 'synced': 31, 'proximity': 30}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '1', 'attention': '0', 'orientation': '129.46'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.28 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 31, 'attention': 31, 'orientation': 0, 'synced': 32, 'proximity': 31}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '98.08'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.25 
+INFO - -------------------
+INFO - 📊 COUNTS: {'action': 32, 'attention': 32, 'orientation': 0, 'synced': 33, 'proximity': 32}
+INFO - Extracted Features: {'1': {'action': '4', 'proximity': '2', 'attention': '0', 'orientation': '105.53'}}
+INFO - --- FINAL MERGE ---
+INFO - Final Result: PREDICTION=not-crossing | PROB_CROSS=0.26 
+INFO - -------------------

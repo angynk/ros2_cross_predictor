@@ -29,7 +29,9 @@ from cross_predictor.features_extractor.yolov_detector import YOLOVDetector
 from cross_predictor.features_extractor.pose_extractor import PoseExtractor
 from cross_predictor.features_extractor.action_extractor import ActionRecognizer
 
-
+import sys
+print(sys.path)
+print(sys.executable)
 
 class MinimalSubscriber(Node):
 

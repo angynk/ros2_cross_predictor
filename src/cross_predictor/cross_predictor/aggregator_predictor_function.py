@@ -39,11 +39,11 @@ class CrossPredictorAggregator(Node):
         self.sub_attention =message_filters.Subscriber(self, Result, '/attention/resultv2', qos_profile=qos)
         self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity/resultv2',qos_profile=qos)
 
-        self.sub_distance= self.create_subscription(
+        '''self.sub_distance= self.create_subscription(
             Result, 
             '/distance/resultv2', 
             self.distance_callback, 
-            qos_profile=qos)
+            qos_profile=qos)'''
 
         self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=100,slop=0.15)
         self.ts.registerCallback(self.synchronized_callback)
@@ -90,8 +90,8 @@ class CrossPredictorAggregator(Node):
         if frame_features is None:
             self.logger.error("Pedestrian Not Found. Skipping this set.")
             return
-        for key in frame_features:
-            frame_features[key]["distance"] = self.latest_distance_label
+        '''for key in frame_features:
+            frame_features[key]["distance"] = self.latest_distance_label'''
         self.logger.info(f"Extracted Features: {frame_features}")
         self.logger.info("--- FINAL MERGE ---")
         final = String()

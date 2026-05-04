@@ -22,11 +22,11 @@ def generate_launch_description():
             name='attention_worker'
         ),
         # 4. Distance Processor
-        Node(
-            package='cross_predictor',
-            executable='distance',
-            name='distance_worker'
-        ),
+        #Node(
+        #    package='cross_predictor',
+        #    executable='distance',
+        #    name='distance_worker'
+        #),
         # 5. The Aggregator (The one with the Manual Map)
         Node(
             package='cross_predictor',

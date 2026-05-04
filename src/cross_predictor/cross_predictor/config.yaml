@@ -112,6 +112,6 @@ KG:
 
 ###################################### FUZZY CONFIGURATION ####################################
 FUZZY:
-  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.txt'
+  rules_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_004.txt'
   rules_detail_path: '/home/angie-melo/Documents/PHD/Workspace/dataHRI/models/fuzzy/fu_001.json'
-  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation','Distance']
+  included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']
