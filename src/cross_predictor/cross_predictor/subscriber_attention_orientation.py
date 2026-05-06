@@ -57,22 +57,27 @@ class MinimalSubscriber(Node):
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         #self.get_logger().info('I heard: "%s"' % msg.header.frame_id)
         results = self.yolov_detector.track_pedestrians(cv_image)
-        attention_results = []
+        attention_results = {}
         for result in results:
             if result.boxes.id is not None:
-                id_person = int(result.boxes.id.numpy()[0])
-                orientation_ling, orientation_value, skeleton = self.pose_extractor.extract_pose(result.orig_img, result.boxes.xywh[0].cpu().numpy())
-                att_ling, att_value = pedestrian_gaze (skeleton)
-                if self.predictor_type=='KG':
-                    attention = id_person.__str__() +'-'+att_ling+','+orientation_ling
-                else:
-                    attention = id_person.__str__() +'-'+str(att_value)+','+str(orientation_value)
-                attention_results.append(attention)
+                ids = result.boxes.id.numpy()
+                for i in range(len(ids)):
+                    boxes = result.boxes.xywh[i].cpu().numpy()
+                    id_person_bbox = self.yolov_detector.id_from_bbox(boxes)
+                    orientation_ling, orientation_value, skeleton = self.pose_extractor.extract_pose(result.orig_img, boxes)
+                    att_ling, att_value = pedestrian_gaze (skeleton)
+                    if self.predictor_type !='KG':
+                        att_ling = str(att_value)
+                        orientation_ling = str(orientation_value)
+                    attention_results[id_person_bbox] = [att_ling, orientation_ling]
+
         result = Result()
         result.header = msg.header
         result.header.stamp = msg.header.stamp
         result.result = attention_results.__str__()
+        #self.get_logger().info(f"Publishing Attention and Orientation Results: {result.result} for frame {msg.header.frame_id}")
         self.publisher.publish(result)
+        
 
 
 def main(args=None):

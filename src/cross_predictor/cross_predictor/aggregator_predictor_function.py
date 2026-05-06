@@ -9,6 +9,7 @@ from collections import defaultdict
 from rclpy.executors import MultiThreadedExecutor
 import yaml
 import ast
+import json
 import logging
 from cross_predictor.kge.kg_predictor import KGPredictor
 from cross_predictor.fuzzy.fuzzy_predictor import FuzzyPredictor
@@ -71,39 +72,41 @@ class CrossPredictorAggregator(Node):
    
     def _increment_count(self, key):
         self.received_counts[key] += 1
-        # Log every 20 messages so we don't spam the terminal
-        #if self.received_counts[key] % 20 == 0:
-        #    self.logger.info(f"DEBUG: Received {key} messages: {self.received_counts[key]}")
 
     def synchronized_callback(self, msg_action, msg_attention, msg_proximity):
-        # Retrieve the strings we hid in the frame_id
-        output = {"features": {}, "prediction": None, "crossing_probability": 0.0, "frame_id": self.received_counts["synced"]}  # Add frame_id for tracking
+        output = {"frame_id": msg_action.header.frame_id, "pedestrians": {} ,
+                   "synced": self.received_counts["synced"], 
+                  } 
         self.received_counts["synced"] += 1
-        self.logger.info(f"📊 COUNTS: {self.received_counts}")
+        #self.logger.info(f"📊 COUNTS: {self.received_counts}")
         self._increment_count("action")
         action = msg_action.result
         self._increment_count("attention")
         attention = msg_attention.result
-        #proximity = msg_proximity.header.frame_id
         self._increment_count("proximity")
         proximity = msg_proximity.result
         frame_features = self.parse_data(action, proximity,attention)
-        if frame_features is None:
-            self.logger.error("Pedestrian Not Found. Skipping this set.")
+        if len(frame_features) == 0:
+            #self.logger.info(f"Action {action}. Attention: {attention}. Proximity: {proximity}")
+            self.logger.info(output)
+            self.logger.info("-------------------")
+            #self.logger.error("Pedestrian Not Found. Skipping this set.")
             return
         '''for key in frame_features:
             frame_features[key]["distance"] = self.latest_distance_label'''
-        output["features"] = frame_features
         final = String()
-        if self.predictor_type=='KG':
-            prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features["1"])
-            final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
-        else:
-            prob_cross, prediction = self.predictor_fuzzy.predict_action(frame_features["1"])
-            final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} "
+        for key in frame_features:
+            output["pedestrians"][key] = {"prediction": "", "crossing_probability": 0.0, "features": frame_features[key]}
+            if self.predictor_type=='KG':
+                prediction, prob_cross, prob_nocross = self.predictor_kg.bayesian_method(frame_features[key])
+                final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} | PROB_NOCROSS={prob_nocross:.2f}"
+            else:
+                prob_cross, prediction = self.predictor_fuzzy.predict_action(frame_features[key])
+                final.data = f"PREDICTION={prediction} | PROB_CROSS={prob_cross:.2f} "
+            output["pedestrians"][key]["prediction"] = prediction
+            output["pedestrians"][key]["crossing_probability"] = prob_cross
         
-        output["prediction"] = prediction
-        output["crossing_probability"] = prob_cross
+        final.data = str(output)
         self.logger.info(output)
         self.logger.info("-------------------")
         self.pub.publish(final)
@@ -116,35 +119,16 @@ class CrossPredictorAggregator(Node):
 
     def parse_data(self, act_list, prox_list, att_list):
         result = {}
-        if act_list == '[]' and prox_list == '[]' and att_list == '[]':
-            return None
-        else:     
-            # Helper function to split ID from the rest of the string
-            # We use .split('-', 1) to ensure we only split at the first dash
-            for item in self.clean_and_split(act_list):
-                idx, val = item.split('-', 1)
-                idx = idx.strip("'") 
-                val = val.strip("'")  
-                result[idx] = {"action": val}
-
-            for item in self.clean_and_split(prox_list):
-                idx, val = item.split('-', 1)
-                idx = idx.strip("'") 
-                val = val.strip("'")  
-                if idx in result:
-                    result[idx]["proximity"] = val
-
-            for item in self.clean_and_split(att_list):
-                idx, rest = item.split('-', 1)
-                idx = idx.strip("'") 
-                rest = rest.strip("'")  
-                attention, orientation = rest.split(',')
-                if idx in result:
-                    result[idx]["attention"] = attention
-                    result[idx]["orientation"] = orientation
-
+        actions = json.loads(act_list.replace("'", "\""))
+        proximities = json.loads(prox_list.replace("'", "\""))
+        attentions = json.loads(att_list.replace("'", "\""))
+        for key in actions.keys():
+            if key in proximities and key in attentions:
+                result[key] = {"action": actions[key], "proximity": proximities[key], "attention": attentions[key][0],
+                                "orientation": attentions[key][1]}
         return result
 
+        
 def main(args=None):
     rclpy.init()
     node = CrossPredictorAggregator()

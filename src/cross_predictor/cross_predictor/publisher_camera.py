@@ -32,7 +32,7 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/JAAD/images/video_0303')
+        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/Markus/Participant_02/frames_test')
         self.declare_parameter('topic_name', '/image_raw')
         self.declare_parameter('publish_period', 0.1)
         self.image_folder = self.get_parameter('image_folder').value
@@ -71,7 +71,8 @@ class MinimalPublisher(Node):
 
         msg = self.bridge.cv2_to_imgmsg(image, encoding='bgr8')
         msg.header.stamp = self.get_clock().now().to_msg()
-        msg.header.frame_id = self.seq.__str__()
+        #msg.header.frame_id = self.seq.__str__()
+        msg.header.frame_id = os.path.basename(image_path)
         self.seq += 1
 
         self.publisher_.publish(msg)
