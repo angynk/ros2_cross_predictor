@@ -1,4 +1,6 @@
 
+import logging
+
 import pandas as pd
 import numpy as np
 '''import os
@@ -15,9 +17,12 @@ class KGPredictor():
     def __init__(self, settings) :
         self.settings = settings
         self.included_features = self.settings['KG']['included_features']
+        if self.settings['DISTANCE_SOURCE'] != 'none':
+            self.included_features.append('Distance')
         self.load_model()
         self.load_base_predictions()
         self.dt = {}
+        self.logger = logging.getLogger('CrossPredictorAggregator')
 
     # Load KGE Model trainned
     def load_model(self):
@@ -91,7 +96,6 @@ class KGPredictor():
                               'attention': self.kg.get_attention([features['attention']])[0],
                               'rules':''}'''
         linguistic_values = features
-        #HYPHOTESIS IF NOT ACTION DON'T USE FOR PREDICTION
 
         hyphotesis_cross_score = self.base_probs['hyphotesis_cross']
         hyphotesis_ncross_score = self.base_probs['hyphotesis_ncross']
@@ -112,10 +116,13 @@ class KGPredictor():
                 eviHyp_triple_cross.append(self.base_probs['evidences_hypothesis_cross'][linguistic_values['action']])
                 eviHyp_triple_ncross.append(self.base_probs['evidences_hypothesis_ncross'][linguistic_values['action']])
         if 'Distance' in self.included_features:
-            evidence_triple_cross.append(self.base_probs['evidence'][linguistic_values['distance']])
-            evidence_triple_ncross.append(self.base_probs['evidence'][linguistic_values['distance']])
-            eviHyp_triple_cross.append(self.base_probs['evidences_hypothesis_cross'][linguistic_values['distance']])
-            eviHyp_triple_ncross.append(self.base_probs['evidences_hypothesis_ncross'][linguistic_values['distance']])
+            if 'distance' in linguistic_values:
+                evidence_triple_cross.append(self.base_probs['evidence'][linguistic_values['distance']])
+                evidence_triple_ncross.append(self.base_probs['evidence'][linguistic_values['distance']])
+                eviHyp_triple_cross.append(self.base_probs['evidences_hypothesis_cross'][linguistic_values['distance']])
+                eviHyp_triple_ncross.append(self.base_probs['evidences_hypothesis_ncross'][linguistic_values['distance']])
+            else:
+                self.logger.warning("Distance feature is included but not found in linguistic values. Skipping distance in Bayesian calculation.")
         if 'Orientation' in self.included_features:
             evidence_triple_cross.append(self.base_probs['evidence'][linguistic_values['orientation']])
             evidence_triple_ncross.append(self.base_probs['evidence'][linguistic_values['orientation']])
@@ -149,6 +156,7 @@ class KGPredictor():
                             bigger_score_rule = self.base_probs['evidences_hypothesis_ncross'][feat]
                             linguistic_values['rules'] = feat
 
+        self.logger.info("Evidence")
         #EVIDENCE 
         evidence_cross_score = np.prod(evidence_triple_cross)
         evidence_ncross_score = np.prod(evidence_triple_ncross)

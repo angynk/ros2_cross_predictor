@@ -35,7 +35,9 @@ setup(
             'proximity = cross_predictor.subscriber_proximity:main',
             'aggregator = cross_predictor.aggregator_predictor_function:main',
             'radar = cross_predictor.publisher_radar:main',
-            #'distance = cross_predictor.subscriber_distance:main',
+            'bridge = cross_predictor.ros2_ws_bridge:main',
+            'distance = cross_predictor.subscriber_distance:main',
+            'detector = cross_predictor.subscriber_detector:main',
         ],
     },
 )

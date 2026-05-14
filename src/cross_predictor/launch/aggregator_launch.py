@@ -3,6 +3,11 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
+        Node(
+            package='cross_predictor',
+            executable='detector',
+            name='detector_worker'
+        ),
         # 1. Proximity Processor
         Node(
             package='cross_predictor',
@@ -22,11 +27,11 @@ def generate_launch_description():
             name='attention_worker'
         ),
         # 4. Distance Processor
-        #Node(
-        #    package='cross_predictor',
-        #    executable='distance',
-        #    name='distance_worker'
-        #),
+        Node(
+            package='cross_predictor',
+            executable='distance',
+            name='distance_worker'
+        ),
         # 5. The Aggregator (The one with the Manual Map)
         Node(
             package='cross_predictor',

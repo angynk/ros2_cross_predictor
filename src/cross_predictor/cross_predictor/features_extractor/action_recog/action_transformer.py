@@ -136,7 +136,7 @@ class KeypointsEmbedding(nn.Module):
         x = torch.cat((inputs, tokens), dim=1)
 
         # Position Embbeding
-        positions = torch.range(start=0, end=self.n_frames-1).type(torch.LongTensor).to(self.device)
+        positions = torch.arange(self.n_frames, dtype=torch.long).to(self.device)
         pe = self.position_embedding(positions)
         x = x + pe
         #x = x.type(torch.LongTensor)

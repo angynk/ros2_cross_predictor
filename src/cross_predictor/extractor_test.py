@@ -9,6 +9,7 @@ from cross_predictor.features_extractor.pose_extractor import PoseExtractor
 from cross_predictor.features_extractor.action_extractor import ActionRecognizer
 from cross_predictor.features_extractor.road_context_extractor import RoadContextDetector
 from cross_predictor.features_extractor.attention_extractor import pedestrian_gaze
+from cross_predictor.features_extractor.distance_extractor import DistanceExtractor
 
 from cross_predictor.kge.kg_predictor import KGPredictor
 
@@ -43,6 +44,14 @@ def id_from_bbox(bbox):
     box_string = f"{bbox[0]}_{bbox[1]}_{bbox[2]}_{bbox[3]}"
     unique_id = hashlib.md5(box_string.encode()).hexdigest()[:8]
     return unique_id
+
+def init_distance_extractor():
+    yolov_detector = YOLOVDetector()
+    distance_extractor = DistanceExtractor()
+    return yolov_detector, distance_extractor
+
+def extract_distance(image_path, yolov_detector, distance_extractor):
+    return distance_extractor.estimate_distance( image_path)
 
 def extract_action(image_path, yolov_detector, pose_extractor, action_recognizer):
     
@@ -98,11 +107,16 @@ with open('src/cross_predictor/cross_predictor/config.yaml') as f:
 #extract_orientation("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 #extract_attention("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 folder_path = Path('/home/angie-melo/Documents/DataSets/Markus/Participant_02/test')
+#folder_path = Path('/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
 image_paths = sorted(folder_path.glob('*.jpg'))
 '''road_detector, yolov_detector= init_proximity_extractor(settings, (129 * 1.7))
 for path in image_paths:
     extract_proximity(path,road_detector, yolov_detector)'''
-yolov_detector, pose_extractor, action_recognizer = init_action_extractor(settings)
+#yolov_detector, pose_extractor, action_recognizer = init_action_extractor(settings)
+yolov_detector, distance_extractor = init_distance_extractor()
+for path in image_paths:
+    distance = extract_distance(path, yolov_detector, distance_extractor)
+    print("Distance: ", distance)
 #for path in image_paths:
 #    extract_action(path, yolov_detector, pose_extractor, action_recognizer)
 #predict_crossing(settings)

@@ -7,12 +7,13 @@ class FuzzyPredictor():
     def __init__(self, settings):
         self.settings = settings
         self.included_features = settings['FUZZY']['included_features']
+        self.rules_path = settings['FUZZY']['rules_path']
+        if self.settings['DISTANCE_SOURCE'] != 'none':
+            self.included_features.append('Distance')
+            self.rules_path = settings['FUZZY']['rules_path_all']
         self.FS = sf.FuzzySystem()
         self.set_inputs_system(self.settings['FUZZY'])
         self.firing_strengths =  {}
-        '''f = open(settings['FUZZY']['rules_detail_path'])
-        data = json.load(f)
-        self.rules = data['rules_features']'''
     
 
     def attention_input (self):
@@ -32,17 +33,18 @@ class FuzzyPredictor():
                                                                          universe_of_discourse=[-1, 5],  concept="Pedestrian Action"))
 
     def distance_car_input (self):
-        #Distance to car Variable
-        '''distance_l1 = sf.TriangleFuzzySet(-1.30,0.9,3.1025,'too_near')
-        distance_l2 = sf.TriangleFuzzySet(0.9,3.10,5.30,'near')
-        distance_l3 = sf.TriangleFuzzySet(3.10,5.30,7.50,'moderate')
-        distance_l4 = sf.TriangleFuzzySet(5.30,7.50,9.71,'far')
-        distance_l5 = sf.TriangleFuzzySet(7.50,9.71,11.91,'too_far')'''
-        distance_l1 = sf.TriangleFuzzySet(-1,1.5,3.0,'too_near')
-        distance_l2 = sf.TriangleFuzzySet(1.5,3.0,6.0,'near')
-        distance_l3 = sf.TriangleFuzzySet(3.0,6.0,15.0,'moderate')
-        distance_l4 = sf.TriangleFuzzySet(6.0,15.0,20.0,'far')
-        distance_l5 = sf.TriangleFuzzySet(15.0,20.0,54.0,'too_far')
+        if self.settings['DISTANCE_SOURCE'] == 'estimation':    
+            distance_l1 = sf.TriangleFuzzySet(-1,   0,   25,  'too_far')
+            distance_l2 = sf.TriangleFuzzySet( 0,  25,   55,  'far')
+            distance_l3 = sf.TriangleFuzzySet(25,  55,  100,  'moderate')
+            distance_l4 = sf.TriangleFuzzySet(55, 100,  160,  'near')
+            distance_l5 = sf.TriangleFuzzySet(100, 160, 256,  'too_near')
+        elif self.settings['DISTANCE_SOURCE'] == 'lidar':   
+            distance_l1 = sf.TriangleFuzzySet(-1,0.5,2.5,'too_near')
+            distance_l2 = sf.TriangleFuzzySet(0.5,2.5,8.0,'near')
+            distance_l3 = sf.TriangleFuzzySet(2.5,8.0,20.0,'moderate')
+            distance_l4 = sf.TriangleFuzzySet(8.0,20.0,45.0,'far')
+            distance_l5 = sf.TriangleFuzzySet(20.0,45.0,100.0,'too_far')
         self.FS.add_linguistic_variable("CDistance", sf.LinguisticVariable([distance_l1, distance_l2, distance_l3,distance_l4,distance_l5], 
                                                                            universe_of_discourse=[-2, 12],  concept="Pedestrian Distance to Car"))
 
@@ -81,7 +83,7 @@ class FuzzyPredictor():
         if 'Action' in self.included_features:
             self.action_input()
         self.set_outuput_zero_sugeno()
-        self.FS.add_rules_from_file(self.settings['FUZZY']['rules_path'])
+        self.FS.add_rules_from_file(self.rules_path)
 
 
     def predict_action(self, features):

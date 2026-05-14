@@ -10,7 +10,8 @@ class YOLOVDetector:
         return results
     
     def track_pedestrians(self,image):
-        results = self.model.track(image, classes=[0] , conf=0.40, iou=0.7)
+        results = self.model.track(image, classes=[0] , conf=0.40,
+                                    iou=0.7, show=False)
         return results
     
     def id_from_bbox(self, bbox):
