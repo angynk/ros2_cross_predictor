@@ -13,7 +13,7 @@ class RoadContextDetector :
         self.focal_l = focal_length #JAAD Default
 
         #Load Model
-        self.model  = torch.jit.load(settings ["F_YOLOPV2"],map_location=torch.device("cpu"))
+        self.model  = torch.jit.load(settings ["F_YOLOPV2"],map_location=device)
         self.model = self.model.to(device)
         self.half = device.type != 'cpu'  # half precision only supported on CUDA
         if self.half:

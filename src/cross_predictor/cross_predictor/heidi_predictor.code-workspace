@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "heidi_predictor",
+			"path": "../../../../../../Workspace/dev/heidi_predictor"
+		},
+		{
+			"name": "occluded_ped",
+			"path": "../../../../../../Workspace/dev/occluded_ped"
+		},
+		{
+			"name": "ped_predictor_ws",
+			"path": "../../.."
+		},
+		{
+			"name": "feature_extractor",
+			"path": "../../../../../../Workspace/dev/feature_extractor"
+		},
+		{
+			"name": "carla_ros2_ws",
+			"path": "../../../../carla_ros2_ws"
+		},
+		{
+			"path": "../../../../../../Workspace/label_video"
+		}
+	],
+	"settings": {}
+}

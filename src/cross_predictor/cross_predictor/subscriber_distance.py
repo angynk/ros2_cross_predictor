@@ -1,9 +1,10 @@
 import json
 import rclpy
 import yaml
+import torch
 import numpy as np
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image, PointCloud2
 from std_msgs.msg import String
 from cv_bridge import CvBridge
 from my_msgs.msg import Result
@@ -25,31 +26,48 @@ class DistanceCalculator(Node):
             if self.distance_source == "estimation":
                 self.get_logger().info("Using distance estimation from image")
                 self.bridge = CvBridge()
-                self.distance_extractor = DistanceExtractor()
-
-                image_sub = message_filters.Subscriber(self, Image, '/yolo/image')
+                device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+                self.distance_extractor = DistanceExtractor(device)
+                self.get_logger().info(f"Initializing DistanceExtractor on device: {device}")
+                image_sub = message_filters.Subscriber(self, Image, '/image_raw')
                 detections_sub = message_filters.Subscriber(self, String, '/yolo/detections')
                 self.sync = message_filters.ApproximateTimeSynchronizer(
-                    [image_sub, detections_sub], queue_size=10, slop=0.05, allow_headerless=True)
+                    [image_sub, detections_sub], queue_size=10, slop=0.15, allow_headerless=True)
                 self.sync.registerCallback(self.listener_callback)
+                self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
 
             elif self.distance_source == "lidar":
-                self.get_logger().info("Using distance from LiDAR")
-                self.declare_parameter('topic_name', '/radar/raw_data')
-                self.topic_name = self.get_parameter('topic_name').value
+                self.get_logger().info("Using distance from LiDAR point cloud")
+                self.height_min = settings.get('LIDAR_HEIGHT_MIN', 0.5)
+                self.height_max = settings.get('LIDAR_HEIGHT_MAX', 2.0)
                 self.subscription = self.create_subscription(
-                    String, self.topic_name, self.calculate_callback, 10)
+                    PointCloud2, '/velodyne_points', self.lidar_callback, 10)
 
             qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,
                              history=HistoryPolicy.KEEP_LAST,
                              depth=10)
             self.publisher = self.create_publisher(Result, '/distance/resultv2', qos)
-            self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
+            
         else:
             self.get_logger().info("Distance feature will not be used (set DISTANCE_SOURCE to 'none')")
 
+    def lidar_callback(self, msg: PointCloud2):
+        # Parse PointCloud2: flat float32 layout [x, y, z, intensity] per point
+        points = np.frombuffer(msg.data, dtype=np.float32).reshape(-1, 4)
+        z = points[:, 2]
+        ped_points = points[(z >= self.height_min) & (z <= self.height_max)]
+        if ped_points.shape[0] == 0:
+            return
+        dists = np.sqrt(ped_points[:, 0] ** 2 + ped_points[:, 1] ** 2)
+        raw_dist = float(dists.min())
+        # Reuse the same labelling logic
+        proxy = String()
+        proxy.data = str(raw_dist)
+        self.calculate_callback(proxy)
+
     def calculate_callback(self, msg):
         raw_dist = float(msg.data)
+        self.get_logger().info(f"Received raw distance: {raw_dist:.2f} m")
         label = str(raw_dist)
         if self.predictor_type == 'KG':
             if 0 <= raw_dist <= 2.5:
@@ -65,6 +83,7 @@ class DistanceCalculator(Node):
         result = Result()
         result.result = label
         self.publisher.publish(result)
+        self.get_logger().info(f"Published distance result: {label} (raw: {raw_dist})")
 
     def listener_callback(self, img_msg: Image, det_msg: String):
         cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')

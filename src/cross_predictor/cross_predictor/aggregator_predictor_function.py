@@ -27,7 +27,6 @@ class CrossPredictorAggregator(Node):
         else:
             self.predictor_fuzzy = FuzzyPredictor(settings)
 
-        self.latest_distance_label = "Unknown"
         self.buffer = defaultdict(dict)
         self.timeout_sec = 3.0  # drop incomplete sets
 
@@ -40,12 +39,17 @@ class CrossPredictorAggregator(Node):
         self.sub_action =message_filters.Subscriber(self, Result, '/action/resultv2', qos_profile=qos)
         self.sub_attention =message_filters.Subscriber(self, Result, '/attention/resultv2', qos_profile=qos)
         self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity/resultv2',qos_profile=qos)
-        self.sub_distance= message_filters.Subscriber(self, Result, '/distance/resultv2', qos_profile=qos)  
-
-        if self.distance_source == "none":
+         
+        if self.distance_source == "lidar":
+                self.latest_distance_label = "Unknown"
+                self.sub_distance= self.create_subscription(Result,'/distance/resultv2', self.distance_callback, 
+                                    qos_profile=qos)
+                
+        if self.distance_source == "none" or self.distance_source == "lidar":
             self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=100,slop=0.15)
             self.ts.registerCallback(self.synchronized_callback)
-        else:
+        elif self.distance_source == "estimation":
+            self.sub_distance= message_filters.Subscriber(self, Result, '/distance/resultv2', qos_profile=qos) 
             self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity, self.sub_distance], queue_size=100,slop=0.15)
             self.ts.registerCallback(self.synchronized_callback_distance)
         
@@ -61,8 +65,15 @@ class CrossPredictorAggregator(Node):
 
         self.get_logger().info("Aggregator started. Waiting for synchronized Image headers...")
 
-    
-   
+    def distance_callback(self, msg):
+        #self.logger.info(f"Received distance update: {msg.result}")
+        try: 
+            self.latest_distance_label = msg.result
+            if self.predictor_type!='KG':
+                self.latest_distance_label = float(self.latest_distance_label)
+        except:
+            self.latest_distance_label = "Unknown"
+
     def _increment_count(self, key):
         self.received_counts[key] += 1
 
@@ -71,7 +82,7 @@ class CrossPredictorAggregator(Node):
                    "synced": self.received_counts["synced"], 
                   } 
         self.received_counts["synced"] += 1
-        #self.logger.info(f"📊 COUNTS: {self.received_counts}")
+        self.logger.info(f"📊 COUNTS: {self.received_counts}")
         self._increment_count("action")
         action = msg_action.result
         self._increment_count("attention")
@@ -79,6 +90,9 @@ class CrossPredictorAggregator(Node):
         self._increment_count("proximity")
         proximity = msg_proximity.result
         frame_features = self.parse_data(action, proximity,attention)
+        if self.distance_source == "lidar":
+            for key in frame_features:
+                frame_features[key]["distance"] = self.latest_distance_label
         final = String()
         if len(frame_features) != 0:
             for key in frame_features:

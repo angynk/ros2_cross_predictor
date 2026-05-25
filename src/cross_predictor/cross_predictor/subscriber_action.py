@@ -28,12 +28,12 @@ class MinimalSubscriber(Node):
         with open('src/cross_predictor/cross_predictor/config.yaml') as f:
             settings = yaml.load(f, Loader=yaml.SafeLoader)
         self.predictor_type = settings['PREDICTOR']
-        self.action_recognizer = ActionRecognizer(settings, torch.device('cpu'))
+        self.action_recognizer = ActionRecognizer(settings, torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
 
-        image_sub = message_filters.Subscriber(self, Image, '/yolo/image')
+        image_sub = message_filters.Subscriber(self, Image, '/image_raw')
         detections_sub = message_filters.Subscriber(self, String, '/yolo/detections')
         self.sync = message_filters.ApproximateTimeSynchronizer(
-            [image_sub, detections_sub], queue_size=10, slop=0.05, allow_headerless=True)
+            [image_sub, detections_sub], queue_size=10, slop=0.15, allow_headerless=True)
         self.sync.registerCallback(self.listener_callback)
 
         qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,

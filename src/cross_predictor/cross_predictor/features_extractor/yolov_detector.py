@@ -3,15 +3,17 @@ import hashlib
 
 class YOLOVDetector:
     def __init__(self):
+        import torch
+        self.device = 0 if torch.cuda.is_available() else 'cpu'
         self.model = YOLO("yolo26n.pt")
 
     def detect_pedestrians(self, image):
-        results = self.model.predict(image, classes=[0])
+        results = self.model.predict(image, classes=[0], device=self.device)
         return results
-    
+
     def track_pedestrians(self,image):
-        results = self.model.track(image, classes=[0] , conf=0.40,
-                                    iou=0.7, show=False)
+        results = self.model.track(image, classes=[0], conf=0.40,
+                                    iou=0.7, show=False, device=self.device)
         return results
     
     def id_from_bbox(self, bbox):

@@ -34,7 +34,7 @@ class MinimalPublisher(Node):
 
         self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/Markus/Participant_02/test')
         self.declare_parameter('topic_name', '/image_raw')
-        self.declare_parameter('publish_period', 0.1)
+        self.declare_parameter('publish_period', 0.025)
         self.image_folder = self.get_parameter('image_folder').value
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value
