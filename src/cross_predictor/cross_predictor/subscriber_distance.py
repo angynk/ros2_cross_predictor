@@ -10,6 +10,7 @@ from cv_bridge import CvBridge
 from my_msgs.msg import Result
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 import message_filters
+import threading
 
 from cross_predictor.features_extractor.distance_extractor import DistanceExtractor
 
@@ -29,11 +30,16 @@ class DistanceCalculator(Node):
                 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                 self.distance_extractor = DistanceExtractor(device)
                 self.get_logger().info(f"Initializing DistanceExtractor on device: {device}")
+                self._latest_distance_str = '{}'
+                self._distance_lock = threading.Lock()
+                self._inference_lock = threading.Lock()
                 image_sub = message_filters.Subscriber(self, Image, '/image_raw')
                 detections_sub = message_filters.Subscriber(self, String, '/yolo/detections')
                 self.sync = message_filters.ApproximateTimeSynchronizer(
                     [image_sub, detections_sub], queue_size=10, slop=0.15, allow_headerless=True)
                 self.sync.registerCallback(self.listener_callback)
+                # publish cached distance at 40Hz using every image timestamp
+                self.create_subscription(Image, '/image_raw', self._publish_cached_distance, 10)
                 self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
 
             elif self.distance_source == "lidar":
@@ -46,7 +52,7 @@ class DistanceCalculator(Node):
             qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,
                              history=HistoryPolicy.KEEP_LAST,
                              depth=10)
-            self.publisher = self.create_publisher(Result, '/distance/resultv2', qos)
+            self.publisher = self.create_publisher(Result, '/distance', qos)
             
         else:
             self.get_logger().info("Distance feature will not be used (set DISTANCE_SOURCE to 'none')")
@@ -85,32 +91,47 @@ class DistanceCalculator(Node):
         self.publisher.publish(result)
         self.get_logger().info(f"Published distance result: {label} (raw: {raw_dist})")
 
-    def listener_callback(self, img_msg: Image, det_msg: String):
-        cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
-        depth = self.distance_extractor.get_depth(cv_image)
-
-        data = json.loads(det_msg.data)
-        distance_results = {}
-        for det in data['detections']:
-            xywh = det['xywh']
-            xyxy = det['xyxy']
-            track_id = det['track_id']
-
-            x1, y1, x2, y2 = map(int, xyxy)
-            cx = (x1 + x2) // 2
-            foot_y = min(y2, depth.shape[0] - 1)
-            depth_value = depth[foot_y, cx]
-
-            distance_results[track_id] = [
-                depth_value,
-                self.distance_extractor.get_distance_label(depth_value)
-            ]
-
+    def _publish_cached_distance(self, img_msg: Image):
+        with self._distance_lock:
+            cached = self._latest_distance_str
         result = Result()
         result.header = img_msg.header
-        result.header.stamp = img_msg.header.stamp
-        result.result = distance_results.__str__()
+        result.result = cached
         self.publisher.publish(result)
+
+    def listener_callback(self, img_msg: Image, det_msg: String):
+        # skip if a previous inference is still running
+        if not self._inference_lock.acquire(blocking=False):
+            return
+        threading.Thread(
+            target=self._run_inference,
+            args=(img_msg, det_msg),
+            daemon=True
+        ).start()
+
+    def _run_inference(self, img_msg: Image, det_msg: String):
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
+            depth = self.distance_extractor.get_depth(cv_image)
+
+            data = json.loads(det_msg.data)
+            distance_results = {}
+            for det in data['detections']:
+                xyxy = det['xyxy']
+                track_id = det['track_id']
+                x1, _, x2, y2 = map(int, xyxy)
+                cx = (x1 + x2) // 2
+                foot_y = min(y2, depth.shape[0] - 1)
+                depth_value = depth[foot_y, cx]
+                distance_results[track_id] = [
+                    depth_value,
+                    self.distance_extractor.get_distance_label(depth_value)
+                ]
+
+            with self._distance_lock:
+                self._latest_distance_str = str(distance_results)
+        finally:
+            self._inference_lock.release()
 
 
 def main(args=None):

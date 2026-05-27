@@ -31,13 +31,13 @@ class MinimalSubscriber(Node):
         image_sub = message_filters.Subscriber(self, Image, '/image_raw')
         detections_sub = message_filters.Subscriber(self, String, '/yolo/detections')
         self.sync = message_filters.ApproximateTimeSynchronizer(
-            [image_sub, detections_sub], queue_size=10, slop=0.15, allow_headerless=True)
+            [image_sub, detections_sub], queue_size=10, slop=0.05, allow_headerless=True)
         self.sync.registerCallback(self.listener_callback)
 
         qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,
                          history=HistoryPolicy.KEEP_LAST,
                          depth=10)
-        self.publisher = self.create_publisher(Result, '/proximity/resultv2', qos_profile=qos)
+        self.publisher = self.create_publisher(Result, '/proximity', qos_profile=qos)
         self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
 
     def listener_callback(self, img_msg: Image, det_msg: String):

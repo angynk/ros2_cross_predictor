@@ -9,7 +9,7 @@ from collections import defaultdict
 from rclpy.executors import MultiThreadedExecutor
 import yaml
 import ast
-import json
+import time
 import logging
 from cross_predictor.kge.kg_predictor import KGPredictor
 from cross_predictor.fuzzy.fuzzy_predictor import FuzzyPredictor
@@ -28,29 +28,29 @@ class CrossPredictorAggregator(Node):
             self.predictor_fuzzy = FuzzyPredictor(settings)
 
         self.buffer = defaultdict(dict)
-        self.timeout_sec = 3.0  # drop incomplete sets
+        #self.timeout_sec = 3.0  # drop incomplete sets
 
         self.pub = self.create_publisher(String, '/cross_predictor/final', 10)
         qos = QoSProfile(
                 reliability=ReliabilityPolicy.BEST_EFFORT, # Don't wait for retries
                 history=HistoryPolicy.KEEP_LAST,          # Only keep the newest
-                depth=10                                   # Small buffer for lower latency
+                depth=50
             )
-        self.sub_action =message_filters.Subscriber(self, Result, '/action/resultv2', qos_profile=qos)
-        self.sub_attention =message_filters.Subscriber(self, Result, '/attention/resultv2', qos_profile=qos)
-        self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity/resultv2',qos_profile=qos)
+        self.sub_action =message_filters.Subscriber(self, Result, '/action', qos_profile=qos)
+        self.sub_attention =message_filters.Subscriber(self, Result, '/attention', qos_profile=qos)
+        self.sub_proximity =message_filters.Subscriber(self, Result, '/proximity',qos_profile=qos)
          
         if self.distance_source == "lidar":
                 self.latest_distance_label = "Unknown"
-                self.sub_distance= self.create_subscription(Result,'/distance/resultv2', self.distance_callback, 
+                self.sub_distance= self.create_subscription(Result,'/distance', self.distance_callback, 
                                     qos_profile=qos)
                 
         if self.distance_source == "none" or self.distance_source == "lidar":
-            self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=100,slop=0.15)
+            self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity], queue_size=40, slop=0.1)
             self.ts.registerCallback(self.synchronized_callback)
         elif self.distance_source == "estimation":
-            self.sub_distance= message_filters.Subscriber(self, Result, '/distance/resultv2', qos_profile=qos) 
-            self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity, self.sub_distance], queue_size=100,slop=0.15)
+            self.sub_distance= message_filters.Subscriber(self, Result, '/distance', qos_profile=qos) 
+            self.ts = ApproximateTimeSynchronizer([self.sub_action, self.sub_attention, self.sub_proximity, self.sub_distance], queue_size=40, slop=0.1)
             self.ts.registerCallback(self.synchronized_callback_distance)
         
         self.logger = logging.getLogger('CrossPredictorAggregator')
@@ -109,7 +109,7 @@ class CrossPredictorAggregator(Node):
         final.data = str(output)
         self.logger.info(output)
         self.pub.publish(final)
-
+        
     def synchronized_callback_distance(self, msg_action, msg_attention, msg_proximity, msg_distance):
         output = {"frame_id": msg_action.header.frame_id, "pedestrians": {} ,
                    "synced": self.received_counts["synced"], 
@@ -123,9 +123,9 @@ class CrossPredictorAggregator(Node):
         proximity = msg_proximity.result
         self._increment_count("distance")
         distance = msg_distance.result
-        #self.logger.info(f"📊 COUNTS: {self.received_counts}")
+        self.logger.info(f"📊 COUNTS: {self.received_counts}")
         frame_features = self.parse_data(action, proximity,attention,distance)
-        #self.logger.info(f"Parsed frame features: {frame_features}")
+        self.logger.info(f"Parsed frame features: {frame_features}")
         final = String()
         if len(frame_features) != 0:
             for key in frame_features:
@@ -150,22 +150,28 @@ class CrossPredictorAggregator(Node):
 
     def parse_data(self, act_list, prox_list, att_list, dist_list=None):
         result = {}
-        actions = ast.literal_eval(act_list)
-        proximities = ast.literal_eval(prox_list)
-        attentions = ast.literal_eval(att_list)
-        if self.distance_source == "estimation":
-            distances = ast.literal_eval(dist_list)
+        try:
 
-        for key in actions.keys():
-            if key in proximities and key in attentions:
-                result[key] = {"action": actions[key], "proximity": proximities[key], "attention": attentions[key][0],
-                                "orientation": attentions[key][1]}
-                if self.distance_source == "estimation":
-                    #self.logger.info(f"Distance for {key}: {distances[key]}")
-                    if self.predictor_type != 'KG':
-                        result[key]["distance"] = distances[key][0]
+            actions = ast.literal_eval(act_list)
+            proximities = ast.literal_eval(prox_list)
+            attentions = ast.literal_eval(att_list)
+            if self.distance_source == "estimation":
+                distances = ast.literal_eval(dist_list)
+
+            for key in proximities.keys():
+                if key in actions and key in attentions:
+                    result[key] = {"action": actions[key], "proximity": proximities[key], "attention": attentions[key][0],
+                                    "orientation": attentions[key][1]}
+                    if self.distance_source == "estimation" and key in distances:
+                        self.logger.info(f"Distance for {key}: {distances[key]}")
+                        if self.predictor_type != 'KG':
+                            result[key]["distance"] = distances[key][0]
+                        else:
+                            result[key]["distance"] = distances[key][1]
                     else:
-                        result[key]["distance"] = distances[key][1]
+                        result= {} # if distance is required but missing, skip all to avoid inconsistent data
+        except Exception as e:
+            self.logger.error(f"Error parsing data: {e}", exc_info=True)
                         
         return result
 

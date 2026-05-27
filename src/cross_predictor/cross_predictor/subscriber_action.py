@@ -39,7 +39,7 @@ class MinimalSubscriber(Node):
         qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,
                          history=HistoryPolicy.KEEP_LAST,
                          depth=10)
-        self.publisher = self.create_publisher(Result, '/action/resultv2', qos)
+        self.publisher = self.create_publisher(Result, '/action', qos)
         self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
 
     def listener_callback(self, img_msg: Image, det_msg: String):

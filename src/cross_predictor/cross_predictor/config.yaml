@@ -27,6 +27,12 @@ DISTANCE_CURB_NEAR : 0.9 # 0.9 normal
 DISTANCE_CURB_MEDIUM : 1.7 # 1.7 normal
 YOLOVP2_RESOLUTION: 1920 #1920 1280
 SCALE_DETECTION: 3 #3 2
+########################## BOUNDING BOX DISTANCE ESTIMATION ##########################
+FOCAL_LENGTH: 219.3      # camera focal length in pixels (129 * 1.7 for JAAD/VR)
+PED_REAL_WIDTH: 0.6      # known pedestrian shoulder width in metres
+PED_REAL_HEIGHT: 1.70    # known pedestrian height in metres
+DISTANCE_NEAR: 5.0       # metres — closer than this → NearFromCurb
+DISTANCE_MEDIUM: 15.0    # metres — closer than this → MiddleFromCurb, else FarFromCurb
 ########################## DATASET ###############################
 DATASET_NAME: "VR"
 PIE_NAME: "pie"
