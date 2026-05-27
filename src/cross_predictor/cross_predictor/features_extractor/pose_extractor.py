@@ -3,6 +3,7 @@ import torch
 import cv2
 import math
 import logging
+import yaml
 from .pedrec_net.pedrec_net_config import PedRecNet50Config, PedRecNetConfig
 from .pedrec_net.PedRecNet import PedRecNet
 from .utils.time_helper import timed
@@ -12,13 +13,15 @@ from typing import Union, List, Tuple, Dict
 from torchvision import transforms
 
 class PoseExtractor:
-    
-    def __init__(self):
-        
+
+    def __init__(self, settings=None):
+        if settings is None:
+            with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+                settings = yaml.safe_load(f)
         self.logger = logging.getLogger(__name__)
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.pose_model = PedRecNet50Config()
-        self.pose_recognizer = self.init_pose_model(PedRecNet(self.pose_model))
+        self.pose_recognizer = self.init_pose_model(PedRecNet(self.pose_model), settings['POSE_WEIGTHS'])
         self.pose_transform = transforms.Compose([
                         transforms.ToTensor(),
                         transforms.Normalize(mean=[0.485, 0.456, 0.406],
@@ -26,12 +29,12 @@ class PoseExtractor:
                     ])
 
 
-    def init_pose_model(self, pose_model: Union[torch.nn.Module]):
-        pose_model.load_state_dict(torch.load( 'src/cross_predictor/cross_predictor/features_extractor/weigths/pose.pth'))
+    def init_pose_model(self, pose_model: Union[torch.nn.Module], weights_path: str):
+        pose_model.load_state_dict(torch.load(weights_path))
         model_parameters = filter(lambda p: p.requires_grad, pose_model.parameters())
         num_params = sum([np.prod(p.size()) for p in model_parameters])
         self.logger.info(
-            "Loaded PoseHRNet (weights: {}). Num of trainable params: {}".format( 'weigths/pose.pth', num_params))
+            "Loaded PoseHRNet (weights: {}). Num of trainable params: {}".format(weights_path, num_params))
         pose_model = pose_model.to(self.device)
         pose_model.eval()
         return pose_model

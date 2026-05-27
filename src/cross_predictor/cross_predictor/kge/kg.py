@@ -27,7 +27,7 @@ class PedestrianCrossKG():
         self.kg['frame'] = self.kg.video + "_f" + self.kg.frame.astype(str)
 
         if self.settings['KG']['rules'] != 'None':
-            f = open('kge/rules.json')
+            f = open(self.settings['KG']['rules_file'])
             data = json.load(f)
             rr = data[self.settings['KG']['rules']]['rules_explanation']
             self.rules = data[self.settings['KG']['rules']]['all_rules']

@@ -27,8 +27,8 @@ class ActionRecognizer ():
         d_ff=d_ff, dropout= dropout, n_encoder=n_encoder, embed_dim=embed_dim,
         n_frames=self.n_frames, n_keypoints=keypoints, mlp_size=mlp_head_size, device=device)
         self.action_recog = make_model(configuration, device, classes)
-        self.action_recog.load_state_dict(torch.load('src/cross_predictor/cross_predictor/features_extractor/weigths/action.ckpt',
-                     map_location=device ))
+        self.action_recog.load_state_dict(torch.load(config['ACTION_WEIGHTS'],
+                     map_location=device))
         self.action_recog.eval()
         self.labels = config['ACT_ACTION_LABELS']
         self.buffer_window = []

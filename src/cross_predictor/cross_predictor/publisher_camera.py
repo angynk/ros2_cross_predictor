@@ -12,19 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import rclpy
 import glob
 import os
+import queue
+import threading
+
 import cv2
-
 import rclpy
-
-from rclpy.node import Node
-from rclpy.qos import QoSProfile
-
-from sensor_msgs.msg import Image
+import yaml
 from cv_bridge import CvBridge
 from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+from rclpy.qos import QoSProfile
+from sensor_msgs.msg import Image
+
+PRELOAD_QUEUE_SIZE = 10
 
 
 class MinimalPublisher(Node):
@@ -32,20 +34,21 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.declare_parameter('image_folder', '/home/angie-melo/Documents/DataSets/Markus/Participant_02/test')
+        with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+            _cfg = yaml.safe_load(f)
+        self.declare_parameter('image_folder', _cfg.get('CAMERA_FOLDER', ''))
         self.declare_parameter('topic_name', '/image_raw')
         self.declare_parameter('publish_period', 0.025)
         self.image_folder = self.get_parameter('image_folder').value
         self.topic_name = self.get_parameter('topic_name').value
         self.publish_period = self.get_parameter('publish_period').value
-        qos = QoSProfile(depth=50)
+
+        qos = QoSProfile(depth=10)
         self.publisher_ = self.create_publisher(Image, self.topic_name, qos)
         self.seq = 0
 
-        self.timer = self.create_timer(self.publish_period, self.timer_callback)
-        
         self.image_files = sorted(
-            glob.glob(os.path.join(self.image_folder, '*'))
+            glob.glob(os.path.join(self.image_folder, '*.jpg'))
         )
 
         if not self.image_files:
@@ -55,39 +58,53 @@ class MinimalPublisher(Node):
         self.bridge = CvBridge()
         self.index = 0
 
+        # Background thread preloads frames so timer_callback never blocks on disk
+        self._frame_queue = queue.Queue(maxsize=PRELOAD_QUEUE_SIZE)
+        self._preload_thread = threading.Thread(target=self._preload_loop, daemon=True)
+        self._preload_thread.start()
+
+        self.timer = self.create_timer(self.publish_period, self.timer_callback)
+
         self.get_logger().info(
             f'Publishing {len(self.image_files)} images from {self.image_folder} '
             f'every {self.publish_period}s'
         )
 
+    def _preload_loop(self):
+        idx = 0
+        while rclpy.ok():
+            path = self.image_files[idx]
+            image = cv2.imread(path)
+            if image is not None:
+                self._frame_queue.put((path, image))
+            idx = (idx + 1) % len(self.image_files)
 
     def timer_callback(self):
-        image_path = self.image_files[self.index]
-        image = cv2.imread(image_path)
-
-        if image is None:
-            self.get_logger().warn(f'Failed to read image: {image_path}')
+        try:
+            image_path, image = self._frame_queue.get_nowait()
+        except queue.Empty:
+            self.get_logger().warn('Frame queue empty — preloader lagging behind publish rate')
             return
 
         msg = self.bridge.cv2_to_imgmsg(image, encoding='bgr8')
         msg.header.stamp = self.get_clock().now().to_msg()
-        #msg.header.frame_id = self.seq.__str__()
         msg.header.frame_id = os.path.basename(image_path)
         self.seq += 1
 
         self.publisher_.publish(msg)
         self.get_logger().info(f'Published: {os.path.basename(image_path)}')
 
-        # Move to next image (loop)
-        self.index = (self.index + 1) % len(self.image_files)
-
 
 def main(args=None):
     rclpy.init(args=args)
     minimal_publisher = MinimalPublisher()
-    rclpy.spin(minimal_publisher)
-    minimal_publisher.destroy_node()
-    rclpy.shutdown()
+    executor = MultiThreadedExecutor()
+    executor.add_node(minimal_publisher)
+    try:
+        executor.spin()
+    finally:
+        minimal_publisher.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

@@ -1,11 +1,15 @@
+import yaml
 from ultralytics import YOLO
 import hashlib
 
 class YOLOVDetector:
-    def __init__(self):
+    def __init__(self, settings=None):
         import torch
+        if settings is None:
+            with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+                settings = yaml.safe_load(f)
         self.device = 0 if torch.cuda.is_available() else 'cpu'
-        self.model = YOLO("yolo26n.pt")
+        self.model = YOLO(settings['YOLO_WEIGHTS'])
 
     def detect_pedestrians(self, image):
         results = self.model.predict(image, classes=[0], device=self.device)

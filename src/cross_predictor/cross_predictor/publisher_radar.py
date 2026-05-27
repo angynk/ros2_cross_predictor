@@ -1,6 +1,7 @@
 import os
 import glob
 import numpy as np
+import yaml
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
@@ -11,8 +12,10 @@ from std_msgs.msg import Header
 class VelodyneFilePublisher(Node):
     def __init__(self):
         super().__init__('velodyne_file_publisher')
+        with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+            _cfg = yaml.safe_load(f)
         self.declare_parameter('topic_name', '/velodyne_points')
-        self.declare_parameter('folder_path', '/home/angie-melo/Documents/DataSets/kitti/2011_09_26/2011_09_26_drive_0059_sync/velodyne_points/data')
+        self.declare_parameter('folder_path', _cfg.get('RADAR_FOLDER', ''))
         self.declare_parameter('publish_period', 0.1)
 
         self.topic_name = self.get_parameter('topic_name').value

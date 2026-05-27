@@ -106,8 +106,8 @@ with open('src/cross_predictor/cross_predictor/config.yaml') as f:
     settings = yaml.load(f, Loader=SafeLoader)
 #extract_orientation("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
 #extract_attention("/home/angie-melo/Documents/DataSets/JAAD/images/video_0190/00058.png")
-folder_path = Path('/home/angie-melo/Documents/DataSets/Markus/Participant_02/test')
-#folder_path = Path('/home/angie-melo/Documents/DataSets/JAAD/images/video_0190')
+folder_path = Path(settings['TEST_IMAGE_FOLDER'])
+#folder_path = Path(settings['TEST_IMAGE_FOLDER'])
 image_paths = sorted(folder_path.glob('*.jpg'))
 '''road_detector, yolov_detector= init_proximity_extractor(settings, (129 * 1.7))
 for path in image_paths:
