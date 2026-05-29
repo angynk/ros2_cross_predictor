@@ -38,6 +38,7 @@ setup(
             'bridge = cross_predictor.ros2_ws_bridge:main',
             'distance = cross_predictor.subscriber_distance:main',
             'detector = cross_predictor.subscriber_detector:main',
+            'overlay = cross_predictor.subscriber_overlay:main',
         ],
     },
 )

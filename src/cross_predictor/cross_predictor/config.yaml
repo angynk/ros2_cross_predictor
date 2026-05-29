@@ -33,6 +33,7 @@ DISTANCE_CURB_MEDIUM : 1.7 # 1.7 normal
 YOLOVP2_RESOLUTION: 1920 #1920 1280
 SCALE_DETECTION: 3 #3 2
 ########################## BOUNDING BOX DISTANCE ESTIMATION ##########################
+DEPTH_MODEL_DIR: '/ros2_cross_predictor/models/depth_anything' 
 FOCAL_LENGTH: 219.3      # camera focal length in pixels (129 * 1.7 for JAAD/VR)
 PED_REAL_WIDTH: 0.6      # known pedestrian shoulder width in metres
 PED_REAL_HEIGHT: 1.70    # known pedestrian height in metres

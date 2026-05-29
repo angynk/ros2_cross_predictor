@@ -28,7 +28,8 @@ class DistanceCalculator(Node):
                 self.get_logger().info("Using distance estimation from image")
                 self.bridge = CvBridge()
                 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-                self.distance_extractor = DistanceExtractor(device)
+                model_dir = settings.get('DEPTH_MODEL_DIR', 'models/depth_anything')
+                self.distance_extractor = DistanceExtractor(device, model_dir)
                 self.get_logger().info(f"Initializing DistanceExtractor on device: {device}")
                 self._latest_distance_str = '{}'
                 self._distance_lock = threading.Lock()
