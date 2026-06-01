@@ -122,6 +122,68 @@ class OverlayNode(Node):
 
     # ── Drawing ───────────────────────────────────────────────────────────
 
+    def get_action_label(self, action):
+        try:
+            action = int(action)
+            if action == 0 or action == 2:    #Stand and Wave
+                return 'Stand'
+            elif action == 1 or action == 3: #Walk and Run
+                return 'Walk'
+            return 'Na'
+        except (ValueError, TypeError):
+            return action
+
+        
+    
+    def get_attention_label(self, attention):
+        try:
+            attention = int(attention)
+            if attention == 0:
+                return 'NotLooking'
+            return 'Looking'
+        except (ValueError, TypeError):
+            return attention
+    
+    def get_orientation_label(self, orientation):
+        try:
+            orientation = float(orientation)
+            if orientation >=0 and orientation < 90:
+                return 'VehDirection'
+            elif orientation >= 90 and orientation <= 180:
+                return 'LeftDirection'
+            elif orientation > 180 and orientation < 270:
+                return 'OppositeVehDirection'
+            return 'RigthDirection'
+        except (ValueError, TypeError):
+            return orientation
+
+    def get_proximity_label(self, proximity):
+        try:
+            proximity = int(proximity)
+            if proximity == 0:
+                return 'NearFromCurb'
+            elif proximity == 1:
+                return 'MiddleDisFromCurb'
+            return 'FarFromCurb'
+        except (ValueError, TypeError):
+            return proximity
+
+    def get_distance_label(self, distance):
+        try:
+            distance = float(distance)
+            if distance >= 160:
+                return "TooNearToEgoVeh"
+            elif distance >= 100:
+                return "NearToEgoVeh"
+            elif distance    >= 55:
+                return "MiddleDisToEgoVeh"
+            elif distance >= 25:
+                return "FarToEgoVeh"
+            else:
+                return "TooFarToEgoVeh"
+        except (ValueError, TypeError):
+            return distance
+
     def _draw_predictions(self, frame):
         pred = self._latest_prediction
         if pred is None:
@@ -147,11 +209,11 @@ class OverlayNode(Node):
 
             lines = [
                 f'Ped {ped_id} | {prediction.upper()}  ({prob:.1%})',
-                f'  action={features.get("action", "?")}  '
-                f'proximity={features.get("proximity", "?")}',
-                f'  attention={features.get("attention", "?")}  '
-                f'orientation={features.get("orientation", "?")}',
-                f'  distance={features.get("distance", "?")}',
+                f'  action={self.get_action_label(features.get("action", "?") )}  '
+                f'proximity={self.get_proximity_label(features.get("proximity", "?"))}',
+                f'  attention={self.get_attention_label(features.get("attention", "?"))}  '
+                f'orientation={self.get_orientation_label(features.get("orientation", "?"))}',
+                f'  distance={self.get_distance_label(features.get("distance", "?"))}',
             ]
             for line in lines:
                 cv2.putText(frame, line, (MARGIN, y),

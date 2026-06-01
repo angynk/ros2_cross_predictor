@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.log
+*.mp4
 build/
 install/
 log/

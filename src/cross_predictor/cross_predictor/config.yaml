@@ -1,14 +1,14 @@
 ################################ GENERAL #######################################
 DETECT_PATH: 'runs/detect'
 DETECT_FOLDER : 'exp'
-POSE_WEIGTHS : '/ros2_cross_predictor/models/pose.pth'
-ACTION_WEIGHTS : '/ros2_cross_predictor/models/action.ckpt'
-YOLO_WEIGHTS : '/ros2_cross_predictor/models/yolo26n.pt'
-CAMERA_FOLDER : '/data/PedOccluded/videos/video_001_frames/'
+POSE_WEIGTHS : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/pose.pth'
+ACTION_WEIGHTS : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/action.ckpt'
+YOLO_WEIGHTS : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/yolo26n.pt'
+CAMERA_FOLDER : '/home/angie-melo/Documents/DataSets/Markus/Participant_02/test'
 RADAR_FOLDER : ''
 TEST_IMAGE_FOLDER : ''
 ############################### DEEP SORT #####################################
-REID_CKPT : 'weigths/ckpt.t7'
+REID_CKPT : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/ckpt.t7'
 MAX_DIST : 0.2
 MIN_CONFIDENCE : 0.2 # Usual 0.3
 NMS_MAX_OVERLAP : 0.5
@@ -19,21 +19,21 @@ NN_BUDGET : 100
 ATTACH : True
 ########################## ABILITY DETECTOR(YOLOV7) ##########################
 IMAGE_SIZE : 640
-ABILITY_WEIGHTS: '/ros2_cross_predictor/models/yolov7last.pt' #yolov7last, yolov7_child
+ABILITY_WEIGHTS: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/yolov7last.pt' #yolov7last, yolov7_child
 THRESHOLD : 0.63
 CONF_THRESHOLD : 0.25
 IOU_THRESHOLD : 0.45
 ######################### GROUP DETECTOR(YOLOV7) ##########################
-GROUP_WEIGHTS : 'weigths/group.pt'
+GROUP_WEIGHTS : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/group.pt'
 ########################## ROAD CONTEXT DETECTOR (YOLOPV2) ##########################
 STRIDE : 32
-F_YOLOPV2: '/ros2_cross_predictor/models/yolopv2.pt'
+F_YOLOPV2: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/yolopv2.pt'
 DISTANCE_CURB_NEAR : 0.9 # 0.9 normal
 DISTANCE_CURB_MEDIUM : 1.7 # 1.7 normal
 YOLOVP2_RESOLUTION: 1920 #1920 1280
 SCALE_DETECTION: 3 #3 2
 ########################## BOUNDING BOX DISTANCE ESTIMATION ##########################
-DEPTH_MODEL_DIR: '/ros2_cross_predictor/models/depth_anything' 
+DEPTH_MODEL_DIR: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/depth_anything' 
 FOCAL_LENGTH: 219.3      # camera focal length in pixels (129 * 1.7 for JAAD/VR)
 PED_REAL_WIDTH: 0.6      # known pedestrian shoulder width in metres
 PED_REAL_HEIGHT: 1.70    # known pedestrian height in metres
@@ -114,8 +114,8 @@ DISTANCE_SOURCE: "estimation" # estimation, lidar, none
 
 ###################################### KG CONFIGURATION ####################################
 KG:
-  model_path: '/ros2_cross_predictor/models/kg/PedFeatRulesKG_Jaad_57'
-  kg_file: '/ros2_cross_predictor/models/kg/JAAD_14K_TRAIN.csv'
+  model_path: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/kg/PedFeatRulesKG_Jaad_57'
+  kg_file: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/kg/JAAD_14K_TRAIN.csv'
   rules: 'None'
   rules_file: 'kge/rules.json'
   dataset: 'jaad'
@@ -126,7 +126,7 @@ KG:
 
 ###################################### FUZZY CONFIGURATION ####################################
 FUZZY:
-  rules_path: '/ros2_cross_predictor/models/fuzzy/fu_004.txt'
-  rules_path_all: '/ros2_cross_predictor/models/fuzzy/fu_001.txt'
-  rules_detail_path: '/ros2_cross_predictor/models/fuzzy/fu_001.json'
+  rules_path: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/fuzzy/fu_004.txt'
+  rules_path_all: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/fuzzy/fu_001.txt'
+  rules_detail_path: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/fuzzy/fu_001.json'
   included_features: [ 'Proximity',  'Action', 'Attention', 'Orientation']
