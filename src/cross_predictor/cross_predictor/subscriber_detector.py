@@ -20,6 +20,7 @@ class DetectorNode(Node):
 
         self.bridge = CvBridge()
         self.yolov_detector = YOLOVDetector()
+        self.frame_number = 0
 
         qos = QoSProfile(depth=50)
         self.subscription = self.create_subscription(
@@ -30,6 +31,7 @@ class DetectorNode(Node):
         self.get_logger().info(f'Detector subscribed to {self.topic_name}')
 
     def listener_callback(self, msg: Image):
+        self.frame_number += 1
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         results = self.yolov_detector.track_pedestrians(cv_image)
 
@@ -40,8 +42,10 @@ class DetectorNode(Node):
                 for i in range(len(ids)):
                     xywh = result.boxes.xywh[i].cpu().numpy().tolist()
                     xyxy = result.boxes.xyxy[i].cpu().numpy().tolist()
+                    unique_id = self.yolov_detector.resolve_tracking_id(
+                        int(ids[i]), self.frame_number)
                     detections.append({
-                        'track_id': int(ids[i]),
+                        'track_id': unique_id,
                         'xywh': xywh,
                         'xyxy': xyxy,
                     })
@@ -54,6 +58,9 @@ class DetectorNode(Node):
         })
         self.image_pub.publish(msg)
         self.detections_pub.publish(det_msg)
+        if len(detections) > 0:
+            count = self.yolov_detector.pedestrian_count
+            self.get_logger().info(f'Total pedestrians identified: {count}')
 
 
 def main(args=None):

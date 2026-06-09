@@ -22,6 +22,7 @@ class CrossPredictorAggregator(Node):
             settings = yaml.load(f, Loader=yaml.SafeLoader)
         self.predictor_type = settings['PREDICTOR']
         self.distance_source = settings['DISTANCE_SOURCE']
+        self.ped_frames_detected = 0
         if self.predictor_type=='KG':
             self.predictor_kg = KGPredictor(settings)
         else:
@@ -82,7 +83,7 @@ class CrossPredictorAggregator(Node):
                    "synced": self.received_counts["synced"], 
                   } 
         self.received_counts["synced"] += 1
-        self.logger.info(f"📊 COUNTS: {self.received_counts}")
+        #self.logger.info(f"📊 COUNTS: {self.received_counts}")
         self._increment_count("action")
         action = msg_action.result
         self._increment_count("attention")
@@ -95,6 +96,7 @@ class CrossPredictorAggregator(Node):
                 frame_features[key]["distance"] = self.latest_distance_label
         final = String()
         if len(frame_features) != 0:
+            self.ped_frames_detected += 1
             for key in frame_features:
                 id_person = key
                 output["pedestrians"][id_person] = {"prediction": "", "crossing_probability": 0.0, "features": frame_features[key]}
@@ -108,6 +110,8 @@ class CrossPredictorAggregator(Node):
         
         final.data = str(output)
         self.logger.info(output)
+        if len(output["pedestrians"])>0:
+            self.logger.info(f"Total pedestrian frames detected: {self.ped_frames_detected}")
         self.pub.publish(final)
         
     def synchronized_callback_distance(self, msg_action, msg_attention, msg_proximity, msg_distance):
@@ -123,11 +127,12 @@ class CrossPredictorAggregator(Node):
         proximity = msg_proximity.result
         self._increment_count("distance")
         distance = msg_distance.result
-        self.logger.info(f"📊 COUNTS: {self.received_counts}")
+        #self.logger.info(f"📊 COUNTS: {self.received_counts}")
         frame_features = self.parse_data(action, proximity,attention,distance)
-        self.logger.info(f"Parsed frame features: {frame_features}")
+        #self.logger.info(f"Parsed frame features: {frame_features}")
         final = String()
         if len(frame_features) != 0:
+            self.ped_frames_detected += 1
             for key in frame_features:
                 id_person = key
                 output["pedestrians"][id_person] = {"prediction": "", "crossing_probability": 0.0, "features": frame_features[key]}
@@ -140,6 +145,9 @@ class CrossPredictorAggregator(Node):
         
         final.data = str(output)
         self.logger.info(output)
+        if len(output["pedestrians"])>0:
+            self.logger.info(f"Total pedestrian frames detected: {self.ped_frames_detected}")
+        
         self.pub.publish(final)
 
     
@@ -163,7 +171,7 @@ class CrossPredictorAggregator(Node):
                     result[key] = {"action": actions[key], "proximity": proximities[key], "attention": attentions[key][0],
                                     "orientation": attentions[key][1]}
                     if self.distance_source == "estimation" and key in distances:
-                        self.logger.info(f"Distance for {key}: {distances[key]}")
+                        #self.logger.info(f"Distance for {key}: {distances[key]}")
                         if self.predictor_type != 'KG':
                             result[key]["distance"] = distances[key][0]
                         else:

@@ -90,7 +90,7 @@ class DistanceCalculator(Node):
         result = Result()
         result.result = label
         self.publisher.publish(result)
-        self.get_logger().info(f"Published distance result: {label} (raw: {raw_dist})")
+        #self.get_logger().info(f"Published distance result: {label} (raw: {raw_dist})")
 
     def _publish_cached_distance(self, img_msg: Image):
         with self._distance_lock:
