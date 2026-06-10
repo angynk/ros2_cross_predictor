@@ -9,7 +9,7 @@ class YOLOVDetector:
     def __init__(self, settings=None):
         import torch
         if settings is None:
-            with open('src/cross_predictor/cross_predictor/config.yaml') as f:
+            with open('/home/angie-melo/Documents/PHD/ros2_cross_predictor/src/cross_predictor/cross_predictor/config.yaml') as f:
                 settings = yaml.safe_load(f)
         self.device = 0 if torch.cuda.is_available() else 'cpu'
         self.model = YOLO(settings['YOLO_WEIGHTS'])

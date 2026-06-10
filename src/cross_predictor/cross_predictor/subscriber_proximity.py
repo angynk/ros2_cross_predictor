@@ -6,6 +6,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 import torch
 import yaml
+import time
 
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
@@ -20,7 +21,7 @@ class MinimalSubscriber(Node):
 
     def __init__(self):
         super().__init__('proximity_subscriber')
-
+        self.counter = 0
         self.bridge = CvBridge()
 
         with open('src/cross_predictor/cross_predictor/config.yaml') as f:
@@ -38,13 +39,21 @@ class MinimalSubscriber(Node):
                          history=HistoryPolicy.KEEP_LAST,
                          depth=10)
         self.publisher = self.create_publisher(Result, '/proximity', qos_profile=qos)
+        self._warm_timer = self.create_timer(0.1, self._keep_gpu_warm)
         self.get_logger().info('Subscribed to /yolo/image + /yolo/detections')
 
-    def listener_callback(self, img_msg: Image, det_msg: String):
-        cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
+    def _keep_gpu_warm(self):
+        self.road_detector.keep_warm()
 
+    def listener_callback(self, img_msg: Image, det_msg: String):
+        self.counter += 1
+        t0 = time.perf_counter()
+        cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
+        t1 = time.perf_counter()
         img_mod = self.road_detector.prepare_img(cv_image)
+        t2 = time.perf_counter()
         self.road_detector.detect_road_context(img_mod, cv_image)
+        t3 = time.perf_counter()
 
         data = json.loads(det_msg.data)
         proximity_results = {}
@@ -61,6 +70,10 @@ class MinimalSubscriber(Node):
         result.header = img_msg.header
         result.header.stamp = img_msg.header.stamp
         result.result = proximity_results.__str__()
+        t4 = time.perf_counter()
+        self.get_logger().info(
+            f"[{self.counter}] bridge={t1-t0:.4f}s prep={t2-t1:.4f}s detect={t3-t2:.4f}s rest={t4-t3:.4f}s total={t4-t0:.4f}s"
+        )
         #self.get_logger().info(f"Proximity results: {result.result}")
         self.publisher.publish(result)
 

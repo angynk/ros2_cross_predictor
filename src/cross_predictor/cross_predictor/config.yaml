@@ -28,6 +28,7 @@ GROUP_WEIGHTS : '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/grou
 ########################## ROAD CONTEXT DETECTOR (YOLOPV2) ##########################
 STRIDE : 32
 F_YOLOPV2: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/yolopv2.pt'
+F_YOLOPV2_TRT: '/home/angie-melo/Documents/PHD/ros2_cross_predictor/models/yolopv2_trt.ts'
 DISTANCE_CURB_NEAR : 0.9 # 0.9 normal
 DISTANCE_CURB_MEDIUM : 1.7 # 1.7 normal
 YOLOVP2_RESOLUTION: 1920 #1920 1280

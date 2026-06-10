@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 import torch
 import numpy as np
 import cv2
@@ -12,22 +13,51 @@ class RoadContextDetector :
         self.device = device
         self.focal_l = focal_length #JAAD Default
 
+        if device.type == 'cuda':
+            torch.backends.cudnn.benchmark = False
+            torch.backends.cudnn.deterministic = True
+
         #Load Model
-        self.model  = torch.jit.load(settings ["F_YOLOPV2"],map_location=device)
+        torch._C._jit_set_profiling_mode(False)
+        torch._C._jit_set_profiling_executor(False)
+        trt_path = settings.get('F_YOLOPV2_TRT', '')
+        if trt_path:
+            import torch_tensorrt  # registers tensorrt.Engine custom class before jit.load
+            model_path = trt_path
+        else:
+            model_path = settings['F_YOLOPV2']
+        self.model = torch.jit.load(model_path, map_location=device)
         self.model = self.model.to(device)
         self.half = device.type != 'cpu'  # half precision only supported on CUDA
-        if self.half:
-            self.model.half() 
+        if self.half and not trt_path:
+            self.model.half()
         self.model.eval()
+        if not trt_path:
+            self.model = torch.jit.freeze(self.model)
         self.min_m_dis = settings['DISTANCE_CURB_NEAR']
         self.med_m_dis = settings['DISTANCE_CURB_MEDIUM']
         self.resolution = settings['YOLOVP2_RESOLUTION']
         self.scale = settings['SCALE_DETECTION']
+        self._warmup()
     
+    def _warmup(self, n_runs=3):
+        dummy_img = np.zeros((640, 640, 3), dtype=np.uint8)
+        self._dummy_tensor = self.prepare_img(dummy_img)
+        for _ in range(n_runs):
+            self.detect_road_context(self._dummy_tensor, dummy_img)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
+
+    def keep_warm(self):
+        with torch.no_grad():
+            self.model(self._dummy_tensor)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
+
     def prepare_img (self, img):
         img_size = 640
         stride = 32
-        img = letterbox(img, img_size, stride=stride)[0]
+        img = letterbox(img, img_size, stride=stride, auto=False)[0]
         img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
         img = np.ascontiguousarray(img)
 
@@ -42,11 +72,19 @@ class RoadContextDetector :
 
     def detect_road_context (self, img, orig_img):
 
+        t0 = time.perf_counter()
         with torch.no_grad(): ## PREVENT ALLOCATION MEMORY
             [pred,anchor_grid],seg,ll= self.model(img)
+        if self.device.type == 'cuda':
+            torch.cuda.synchronize(self.device)
+        t1 = time.perf_counter()
 
         self.da_seg_mask = driving_area_mask(self.scale,seg)
+        t2 = time.perf_counter()
         self.ll_seg_mask = lane_line_mask(self.scale,ll)
+        t3 = time.perf_counter()
+
+        print(f"  model={t1-t0:.4f}s  da_mask={t2-t1:.4f}s  ll_mask={t3-t2:.4f}s")
 
         self.x_shape,_ = self.ll_seg_mask.shape
         #self.paint_seg_mask(orig_img)
