@@ -18,22 +18,13 @@ class RoadContextDetector :
             torch.backends.cudnn.deterministic = True
 
         #Load Model
-        torch._C._jit_set_profiling_mode(False)
-        torch._C._jit_set_profiling_executor(False)
-        trt_path = settings.get('F_YOLOPV2_TRT', '')
-        if trt_path:
-            import torch_tensorrt  # registers tensorrt.Engine custom class before jit.load
-            model_path = trt_path
-        else:
-            model_path = settings['F_YOLOPV2']
+        model_path = settings['F_YOLOPV2']
         self.model = torch.jit.load(model_path, map_location=device)
         self.model = self.model.to(device)
         self.half = device.type != 'cpu'  # half precision only supported on CUDA
-        if self.half and not trt_path:
+        if self.half:
             self.model.half()
         self.model.eval()
-        if not trt_path:
-            self.model = torch.jit.freeze(self.model)
         self.min_m_dis = settings['DISTANCE_CURB_NEAR']
         self.med_m_dis = settings['DISTANCE_CURB_MEDIUM']
         self.resolution = settings['YOLOVP2_RESOLUTION']
